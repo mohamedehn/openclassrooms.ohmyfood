@@ -1,0 +1,9 @@
+@import './utils/variables';
+@mixin test {
+    color: blue;
+    background-color: red;
+}
+.titre
+{
+    @include test();
+}
