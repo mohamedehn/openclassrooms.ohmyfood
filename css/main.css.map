@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AEAA,OAAO,CAAC,sEAAI;AFGZ,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,oBAAoB;EACjC,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,IAAI;CAGlB",
     "sources": [
         "../sass/main.scss",
-        "../sass/utils/_variables.scss"
+        "../sass/utils/_variables.scss",
+        "../sass/base/_base.scss"
     ],
     "names": [],
     "file": "main.css"

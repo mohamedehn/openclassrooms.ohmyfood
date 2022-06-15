@@ -1,1 +1,12 @@
 @import './utils/variables';
+@import './base/base';
+
+.titre{
+    display: flex;
+    font-weight: bold;
+    font-family: 'Shrikhand', cursive;
+    justify-content: center;
+    font-size: 30px;
+    @include mobile-only{ 
+    }
+}
