@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <!--Ci-dessous la police d'écriture pour le titre-->
+    <!--Ci-dessous la police d'écriture pour le titre "Shrikand" et pour le texte "Roboto"-->
     <style>@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
     <!-- Ci-dessous kit pour icons via fontawesome-->
    <script src="https://kit.fontawesome.com/fca527c4a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/main.css">
@@ -14,17 +15,21 @@
         <div class="titre">
             <p>ohmyfood</p>
         </div>
-        <div class="localisation">
+        <div class="localisation">                                   
             <!-- Ici nous indiquerons la fonction "rechercher" du site web-->
             <form method="post" action="traitement.php">
                 <div class="formulaire">
                     <div> <i class="fa-solid fa-location-dot"></i> </div>
                     <div> <input type="search" placeholder="Paris, Belleville" name="zonederecherche" id="ville" class="search" /> </div>
-                <div>   
+                </div> 
+            </form>  
         </div>
         <div class="accueil">
             <h1>Réserver le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <div class="btn-explo">
+                <p>Explorer nos restaurants</p>
+            </div>
         </div>
     </header>
     <main>

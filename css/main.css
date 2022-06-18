@@ -1,5 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.titre {
+* {
+  max-width: 1500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,6 +19,64 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 70px;
+  margin-bottom: -55px;
+  margin-top: -50px;
+}
+
+header .localisation .formulaire {
+  background-color: rgba(211, 211, 211, 0.758);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  font-size: 40px;
+  height: 120px;
+}
+
+header .localisation .formulaire .search {
+  border: none;
+  background-color: rgba(211, 211, 211, 0.13);
+  font-size: 35px;
+  font-weight: 600;
+  outline: none;
+  margin-left: 40px;
+}
+
+header .localisation .formulaire .fa-solid {
+  margin-left: 100px;
+}
+
+header .accueil {
+  padding-top: 80px;
+  padding-bottom: 125px;
   font-size: 30px;
+  text-align: center;
+  background-color: #f2efef;
+}
+
+header .accueil .h1 {
+  font-weight: 900;
+}
+
+header .accueil .btn-explo {
+  border: 2px solid;
+  border-radius: 50px 50px 50px 50px;
+  width: 600px;
+  display: inline-block;
+  font-size: 45px;
+  height: 100px;
+  background: linear-gradient(60deg, #9356dc, #e263f2f7);
+}
+
+header .accueil .btn-explo p {
+  color: white;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=main.css.map */
