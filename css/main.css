@@ -58,7 +58,7 @@ header .accueil {
   padding-bottom: 125px;
   font-size: 30px;
   text-align: center;
-  background-color: #f2efef;
+  background-color: #f2efef5c;
 }
 
 header .accueil .h1 {
@@ -71,12 +71,78 @@ header .accueil .btn-explo {
   width: 600px;
   display: inline-block;
   font-size: 45px;
-  height: 100px;
+  margin-top: 30px;
+  height: 135px;
   background: linear-gradient(60deg, #9356dc, #e263f2f7);
 }
 
 header .accueil .btn-explo p {
   color: white;
   font-weight: bolder;
+}
+
+main .fonctionnement {
+  margin-top: 115px;
+}
+
+main .fonctionnement h1 {
+  font-weight: 900;
+}
+
+main .fonctionnement .onglet1 {
+  margin-top: 100px;
+  border: 1px solid;
+  border-radius: 50px 50px 50px 50px;
+  width: 850px;
+  height: 150px;
+  font-size: 40px;
+  background-color: #f2efef5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .fonctionnement .onglet2 {
+  margin-top: 100px;
+  border: 1px solid;
+  border-radius: 50px 50px 50px 50px;
+  width: 850px;
+  height: 150px;
+  font-size: 40px;
+  background-color: #f2efef5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .fonctionnement .onglet3 {
+  margin-top: 100px;
+  border: 1px solid;
+  border-radius: 50px 50px 50px 50px;
+  width: 850px;
+  height: 150px;
+  font-size: 40px;
+  background-color: #f2efef5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

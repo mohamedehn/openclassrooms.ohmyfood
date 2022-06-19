@@ -21,7 +21,7 @@ header .localisation .formulaire{
     height: 120px;
     .search{
         border: none;
-        background-color: rgba(211, 211, 211, 0.13);
+        background-color: rgb(211 211 211 / 52%);
         font-size: 35px;
         font-weight: 600;
         outline:none;
@@ -37,7 +37,7 @@ header .accueil{
     padding-bottom: 125px;
     font-size: 30px;
     text-align: center;
-    background-color: #f2efef;
+    background-color: #f2efef5c;
     .h1{
         font-weight: 900;
     }
@@ -47,11 +47,31 @@ header .accueil{
         width: 600px;
         display: inline-block;
         font-size: 45px;
-        height: 100px;
+        margin-top: 30px;
+        height: 135px;
         background: linear-gradient(60deg, #9356dc, #e263f2f7);
             p{
                 color: white;
                 font-weight: bolder;
             }
     }
+}
+
+main .fonctionnement{
+    margin-top: 115px;
+        h1{
+            font-weight: 900;
+        }
+}
+
+main .fonctionnement .onglet1{
+    @include onglet
+}
+
+main .fonctionnement .onglet2{
+    @include onglet
+}
+
+main .fonctionnement .onglet3{
+    @include onglet
 }
