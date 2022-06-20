@@ -10,6 +10,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.fa-heart {
+  font-weight: normal;
+}
+
 header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,7 +46,7 @@ header .localisation .formulaire {
 
 header .localisation .formulaire .search {
   border: none;
-  background-color: rgba(211, 211, 211, 0.13);
+  background-color: #babab000;
   font-size: 35px;
   font-weight: 600;
   outline: none;
@@ -87,6 +91,8 @@ main .fonctionnement {
 
 main .fonctionnement h1 {
   font-weight: 900;
+  padding-left: 40px;
+  font-size: 42px;
 }
 
 main .fonctionnement .onglet1 {
@@ -106,6 +112,15 @@ main .fonctionnement .onglet1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .fonctionnement .onglet1 .fa-mobile-screen-button {
+  color: grey;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  font-size: 50px;
 }
 
 main .fonctionnement .onglet2 {
@@ -125,6 +140,15 @@ main .fonctionnement .onglet2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .fonctionnement .onglet2 .fa-bars {
+  color: grey;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  font-size: 50px;
 }
 
 main .fonctionnement .onglet3 {
@@ -144,5 +168,88 @@ main .fonctionnement .onglet3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .fonctionnement .onglet3 .fa-store {
+  color: grey;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  font-size: 50px;
+}
+
+main .restaurant {
+  background-color: #f2efef5c;
+}
+
+main .restaurant h1 {
+  font-weight: 900;
+  padding-left: 40px;
+  font-size: 42px;
+}
+
+main .restaurant .liencarte {
+  text-decoration: none;
+}
+
+main .restaurant .liencarte .image-card {
+  height: 500px;
+  width: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50px 50px 0px 0px;
+}
+
+main .restaurant .card {
+  margin-top: 70px;
+}
+
+main .restaurant .card-body {
+  padding-left: 50px;
+  background-color: white;
+  border: 1px solid grey;
+  margin-right: auto;
+  margin-left: auto;
+  width: 846px;
+  height: 150px;
+  border-radius: 0px 0px 50px 50px;
+  font-size: 30px;
+  color: black;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .restaurant .card-body .card-title p {
+  margin: 17px;
+  font-size: 45px;
+}
+
+main .restaurant .card-heart {
+  padding-left: 380px;
+  padding-top: 50px;
+  font-size: 50px;
+  color: #8b8686;
+  font-weight: normal;
+}
+
+footer .end {
+  background-color: #383434;
+  color: white;
+  margin-top: 110px;
+  list-style-type: none;
+  padding-left: 50px;
+  padding-bottom: 60px;
+}
+
+footer .end h1 {
+  font-family: 'Shrikhand';
 }
 /*# sourceMappingURL=main.css.map */

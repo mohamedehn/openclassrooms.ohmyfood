@@ -1,0 +1,67 @@
+@mixin desktop-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+    @content;
+    }}
+
+@mixin onglet ($marginTop){
+    margin-top: $marginTop;
+    border: 1px solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 850px;
+    height: 150px;
+    font-size: 40px;
+    background-color: #f2efef5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin onglet-icons{
+    color: grey;
+    flex-basis: 15%;
+    font-size: 50px;
+}
+
+@mixin image{
+    height: 500px;
+    width: 900px;
+    object-fit: cover;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    border-radius: 50px 50px 0px 0px;
+}
+
+@mixin card{
+    margin-top: 70px;
+}
+
+@mixin card-body{
+    padding-left: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    margin-right: auto;
+    margin-left: auto;
+    width: 846px;
+    height: 150px;
+    border-radius: 0px 0px 50px 50px;
+    font-size: 30px;
+    color: black;
+    font-weight: 900;
+    display: flex;
+}
+
+@mixin card-text{
+    margin: 17px;
+    font-size: 45px;
+}
+
+@mixin card-heart {
+    padding-left: 380px;
+    padding-top: 50px;
+    font-size: 50px;
+    color: #8b8686;
+    font-weight: normal;
+}

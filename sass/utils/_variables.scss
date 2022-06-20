@@ -1,21 +1,3 @@
-$breakpoints: (
-    mobile: 769px
-);
+$breakpoints: 769px;
 
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
-    @content;
-    }}
-
-@mixin onglet {
-    margin-top: 100px;
-    border: 1px solid;
-    border-radius: 50px 50px 50px 50px;
-    width: 850px;
-    height: 150px;
-    font-size: 40px;
-    background-color: #f2efef5c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+$color-violet : linear-gradient(60deg, #9356dc, #e263f2f7);
