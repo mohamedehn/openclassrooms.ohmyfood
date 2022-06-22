@@ -3,6 +3,8 @@
     @content;
     }}
 
+/*Ci-dessous Mixin pour la main page*/
+
 @mixin onglet ($marginTop){
     margin-top: $marginTop;
     border: 1px solid;
@@ -32,6 +34,7 @@
     margin-left: auto;
     display: flex;
     border-radius: 50px 50px 0px 0px;
+    position: relative;
 }
 
 @mixin card{
@@ -64,4 +67,37 @@
     font-size: 50px;
     color: #8b8686;
     font-weight: normal;
+}
+
+@mixin footer-li {
+    padding-top: 20px;
+}
+
+@mixin new{
+    color: green;
+    font-size: 41px;
+    border: 1px solid;
+    background-color: #99E2D0;
+    width: 180px;
+    text-align: center;
+}
+
+/*Ci-dessous Mixin pour la page "A la française"*/
+
+@mixin bloc-menu {
+    border: 1px solid;
+    border-radius: 20px 20px;
+    background-color: white;
+    font-size: 40px;
+    height: 183px;
+    border-color: lightgray;
+    width: 89%;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+@mixin sous-titre {
+    font-size: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
 }

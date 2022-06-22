@@ -1,0 +1,55 @@
+@import './utils/variables';
+@import './base/base';
+@import './utils/mixin';
+
+header .titre{
+    display: flex;
+    font-weight: bold;
+    font-family: 'Shrikhand', cursive;
+    justify-content: center;
+    font-size: 70px;
+    margin-bottom: -55px;
+    margin-top: -50px;
+}
+
+header .card{
+    z-index: 1;
+    position: relative;
+}
+
+header .card .liencarte .bloc-card .image-card{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .menu{
+    height: 100%;
+    width: 100%;
+    background-color: #f2efef;
+    margin-top: -135px;
+    z-index: 10;
+    position: relative;
+    border: 1px solid #f2efef;
+    border-radius: 65px 65px;
+        .title{
+            font-size: 62px;
+            font-family: 'Shrikhand';
+            display: flex;
+            align-items: baseline;
+            justify-content: space-around;
+        }
+        .sous-titre{
+            @include sous-titre;
+        }
+}
+
+main .menu .card a{
+    text-decoration: none;
+        .bloc-menu{
+    @include bloc-menu;
+            .menu-title{
+                color: black;
+            }
+}
+}

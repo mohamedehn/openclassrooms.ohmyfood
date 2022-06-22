@@ -1,0 +1,95 @@
+@charset "UTF-8";
+* {
+  max-width: 1500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.fa-heart {
+  font-weight: normal;
+}
+
+/*Ci-dessous Mixin pour la main page*/
+/*Ci-dessous Mixin pour la page "A la française"*/
+header .titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  font-family: 'Shrikhand', cursive;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 70px;
+  margin-bottom: -55px;
+  margin-top: -50px;
+}
+
+header .card {
+  z-index: 1;
+  position: relative;
+}
+
+header .card .liencarte .bloc-card .image-card {
+  height: 700px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .menu {
+  height: 100%;
+  width: 100%;
+  background-color: #f2efef;
+  margin-top: -135px;
+  z-index: 10;
+  position: relative;
+  border: 1px solid #f2efef;
+  border-radius: 65px 65px;
+}
+
+main .menu .title {
+  font-size: 62px;
+  font-family: 'Shrikhand';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .menu .sous-titre {
+  font-size: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+main .menu .card a {
+  text-decoration: none;
+}
+
+main .menu .card a .bloc-menu {
+  border: 1px solid;
+  border-radius: 20px 20px;
+  background-color: white;
+  font-size: 40px;
+  height: 183px;
+  border-color: lightgray;
+  width: 89%;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+main .menu .card a .bloc-menu .menu-title {
+  color: black;
+}
+/*# sourceMappingURL=a la française.css.map */
