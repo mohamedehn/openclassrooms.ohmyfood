@@ -26,6 +26,17 @@
     font-size: 50px;
 }
 
+@mixin btn-explo{
+    border: 2px solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 600px;
+    display: inline-block;
+    font-size: 45px;
+    margin-top: 30px;
+    height: 135px;
+    background: $color-violet;
+}
+
 @mixin image{
     height: 500px;
     width: 900px;
@@ -86,18 +97,26 @@
 
 @mixin bloc-menu {
     border: 1px solid;
-    border-radius: 20px 20px;
+    border-radius: 25px 25px;
     background-color: white;
     font-size: 40px;
-    height: 183px;
+    height: 140px;
     border-color: lightgray;
-    width: 89%;
     margin-right: 50px;
     margin-left: 50px;
+    margin-bottom: 40px;
 }
 
 @mixin sous-titre {
     font-size: 40px;
     margin-right: 50px;
     margin-left: 50px;
+    text-decoration: underline #99E2D0;
+    text-underline-position: under;
+}
+
+@mixin menu-p {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 25px;
 }

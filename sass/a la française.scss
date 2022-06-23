@@ -24,16 +24,16 @@ header .card .liencarte .bloc-card .image-card{
 }
 
 main .menu{
-    height: 100%;
+    height: 2500px;
     width: 100%;
-    background-color: #f2efef;
+    background-color: #f3f3f3;
     margin-top: -135px;
     z-index: 10;
     position: relative;
-    border: 1px solid #f2efef;
-    border-radius: 65px 65px;
+    border: 1px solid #f3f3f3;
+    border-radius: 65px 65px 0px 0px;
         .title{
-            font-size: 62px;
+            font-size: 45px;
             font-family: 'Shrikhand';
             display: flex;
             align-items: baseline;
@@ -50,6 +50,67 @@ main .menu .card a{
     @include bloc-menu;
             .menu-title{
                 color: black;
+                padding: 25px;
             }
+                p{
+                    @include menu-p;
+                }
+                .title1{
+                    text-shadow: 0 0 black;
+                    font-weight: bolder;
+                }
+                span{
+                    font-weight: bolder;
+                    text-shadow: 0 0 black;
+                }
 }
+}
+
+main .menu .card .subtitle{
+    display: inline;
+    font-weight: 100;
+}
+
+main .menu .btn-cmd{
+    border: 2px solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 400px;
+    font-size: 45px;
+    margin-top: 30px;
+    height: 135px;
+    background: $color-violet;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 105px;
+}
+
+footer{
+    margin-top: -105px;
+}
+
+footer .end{
+    background-color: #383434;
+    color: white;
+    margin-top: 110px;
+    list-style-type: none;
+    padding-left: 50px;
+    padding-bottom: 60px;
+        h1{
+            font-family: 'Shrikhand';
+        }
+}
+
+footer .end {
+    @include footer-li;
+    & li{
+        @include footer-li;
+        span {
+            padding-left: 15px;
+        }
+    }
+}
+
+footer .end li i{
+    font-size: 14px;
 }

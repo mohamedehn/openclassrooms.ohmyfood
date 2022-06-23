@@ -43,14 +43,7 @@ header .accueil{
         font-weight: 900;
     }
     .btn-explo{
-        border: 2px solid;
-        border-radius: 50px 50px 50px 50px;
-        width: 600px;
-        display: inline-block;
-        font-size: 45px;
-        margin-top: 30px;
-        height: 135px;
-        background: $color-violet;
+        @include btn-explo;
             p{
                 color: white;
                 font-weight: bolder;
