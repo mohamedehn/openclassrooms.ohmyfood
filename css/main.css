@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   max-width: 1500px;
   -webkit-box-sizing: border-box;
@@ -17,7 +16,8 @@ body {
 }
 
 /*Ci-dessous Mixin pour la main page*/
-/*Ci-dessous Mixin pour la page "A la française"*/
+/*Ci-dessous Mixin pour les menus */
+/*Ci-dessous SCSS pour la page d'accueil*/
 header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +186,7 @@ main .fonctionnement .onglet3 .fa-store {
 main .restaurant {
   background-color: #f2efef5c;
   margin-top: 150px;
+  height: 3225px;
 }
 
 main .restaurant h1 {
@@ -226,7 +227,7 @@ main .restaurant .card {
   text-align: center;
   position: absolute;
   left: 715px;
-  bottom: -745px;
+  bottom: -660px;
 }
 
 .card .liencarte .bloc-card .new2 {
@@ -238,7 +239,7 @@ main .restaurant .card {
   text-align: center;
   position: absolute;
   left: 715px;
-  bottom: -1460px;
+  bottom: -1375px;
 }
 
 main .restaurant .card-body {
@@ -275,6 +276,10 @@ main .restaurant .cite-rouge {
   width: 390px;
 }
 
+footer {
+  margin-top: -103px;
+}
+
 footer .end {
   background-color: #383434;
   color: white;
@@ -282,6 +287,8 @@ footer .end {
   list-style-type: none;
   padding-left: 50px;
   padding-bottom: 60px;
+  font-size: 26px;
+  height: 390px;
 }
 
 footer .end h1 {
@@ -294,6 +301,7 @@ footer .end {
 
 footer .end li {
   padding-top: 20px;
+  font-size: 40px;
 }
 
 footer .end li span {
@@ -301,6 +309,6 @@ footer .end li span {
 }
 
 footer .end li i {
-  font-size: 14px;
+  font-size: 35px;
 }
 /*# sourceMappingURL=main.css.map */

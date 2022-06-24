@@ -2,6 +2,8 @@
 @import './base/base';
 @import './utils/mixin';
 
+/*Ci-dessous SCSS pour la page d'accueil*/
+
 header .titre{
     display: flex;
     font-weight: bold;
@@ -84,6 +86,7 @@ main .fonctionnement .onglet3{
 main .restaurant{
     background-color: #f2efef5c;
     margin-top: 150px;
+    height: 3225px;
         h1{
             font-weight: 900;
             padding-left: 40px;
@@ -107,14 +110,14 @@ main .restaurant .card{
     @include new;
     position: absolute;
     left: 715px;
-    bottom: -745px;
+    bottom: -660px;
 }
 
 .card .liencarte .bloc-card .new2{
     @include new;
     position: absolute;
     left: 715px;
-    bottom: -1460px;
+    bottom: -1375px;
 }
 
 main .restaurant .card-body{
@@ -133,13 +136,12 @@ main .restaurant .cite-rouge{
     width: 390px;
 }
 
+footer{
+    margin-top: -103px;
+}
+
 footer .end{
-    background-color: #383434;
-    color: white;
-    margin-top: 110px;
-    list-style-type: none;
-    padding-left: 50px;
-    padding-bottom: 60px;
+    @include footer-end;
         h1{
             font-family: 'Shrikhand';
         }
@@ -149,6 +151,7 @@ footer .end {
     @include footer-li;
     & li{
         @include footer-li;
+        font-size: 40px;
         span {
             padding-left: 15px;
         }
@@ -156,5 +159,5 @@ footer .end {
 }
 
 footer .end li i{
-    font-size: 14px;
+    font-size: 35px;
 }

@@ -84,6 +84,17 @@
     padding-top: 20px;
 }
 
+@mixin footer-end {
+    background-color: #383434;
+    color: white;
+    margin-top: 110px;
+    list-style-type: none;
+    padding-left: 50px;
+    padding-bottom: 60px;
+    font-size: 26px;
+    height: 390px;
+}
+
 @mixin new{
     color: green;
     font-size: 41px;
@@ -93,7 +104,7 @@
     text-align: center;
 }
 
-/*Ci-dessous Mixin pour la page "A la française"*/
+/*Ci-dessous Mixin pour les menus */
 
 @mixin bloc-menu {
     border: 1px solid;
@@ -119,4 +130,19 @@
     padding: 0px;
     margin: 0px;
     padding-left: 25px;
+}
+
+@mixin btn-cmd {
+    border: 2px solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 400px;
+    font-size: 45px;
+    margin-top: 30px;
+    height: 135px;
+    background: $color-violet;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 105px;
+    margin-bottom: 125px;
 }
