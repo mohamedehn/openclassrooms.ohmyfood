@@ -73,6 +73,11 @@ main .menu .card a{
 }
 }
 
+main .menu .card .bloc-menu .menu-subtitle{
+    display: flex;
+    justify-content: space-between;
+}
+
 main .menu .card .subtitle{
     display: inline;
     font-weight: 100;

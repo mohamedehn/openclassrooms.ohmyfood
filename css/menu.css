@@ -121,6 +121,15 @@ main .menu .card a .bloc-menu span {
   text-shadow: 0 0 black;
 }
 
+main .menu .card .bloc-menu .menu-subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 main .menu .card .subtitle {
   display: inline;
   font-weight: 100;
