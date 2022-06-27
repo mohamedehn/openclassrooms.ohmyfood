@@ -136,18 +136,25 @@ main .menu .card .subtitle {
 }
 
 main .menu .btn-cmd {
-  border: 2px solid;
+  border: 0.5px solid;
   border-radius: 50px 50px 50px 50px;
-  width: 400px;
+  width: 45%;
   font-size: 45px;
   margin-top: 30px;
-  height: 135px;
-  background: linear-gradient(60deg, #9356dc, #e263f2f7);
+  background: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background: linear-gradient(0deg, #e263f2f7, #b077f4);
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: 105px;
   margin-bottom: 125px;
+  -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
+          box-shadow: 6px 6px 6px #cdcdcd45;
+}
+
+main .menu .btn-cmd p {
+  color: white;
+  font-family: 'Roboto-ui';
 }
 
 footer {
@@ -163,6 +170,11 @@ footer .end {
   padding-bottom: 60px;
   font-size: 26px;
   height: 390px;
+}
+
+footer .end a {
+  text-decoration: none;
+  color: white;
 }
 
 footer .end h1 {

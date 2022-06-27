@@ -69,24 +69,38 @@ header .accueil {
   background-color: #f2efef5c;
 }
 
-header .accueil .h1 {
+header .accueil h1 {
   font-weight: 900;
+  width: 65%;
+  text-align: center;
+  display: inline-block;
+}
+
+header .accueil p {
+  font-size: 50px;
+  margin: 0;
 }
 
 header .accueil .btn-explo {
-  border: 2px solid;
+  border: 0.5px solid;
   border-radius: 50px 50px 50px 50px;
-  width: 600px;
+  width: 52%;
   display: inline-block;
-  font-size: 45px;
-  margin-top: 30px;
-  height: 135px;
-  background: linear-gradient(60deg, #9356dc, #e263f2f7);
+  margin-top: 65px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background: linear-gradient(0deg, #e263f2f7, #b077f4);
+  text-align: center;
+  padding: 20px;
+  -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
+          box-shadow: 6px 6px 6px #cdcdcd45;
 }
 
 header .accueil .btn-explo p {
   color: white;
-  font-weight: bolder;
+  font-weight: 500;
+  display: contents;
+  font-size: 45px;
+  font-family: 'Roboto-ui';
 }
 
 main .fonctionnement {
@@ -95,15 +109,15 @@ main .fonctionnement {
 
 main .fonctionnement h1 {
   font-weight: 900;
-  padding-left: 40px;
+  padding-left: 4%;
   font-size: 42px;
 }
 
 main .fonctionnement .onglet1 {
   margin-top: 100px;
-  border: 1px solid;
+  border: 1px solid #e8e3e3;
   border-radius: 50px 50px 50px 50px;
-  width: 850px;
+  width: 90%;
   height: 150px;
   font-size: 40px;
   background-color: #f2efef5c;
@@ -118,6 +132,20 @@ main .fonctionnement .onglet1 {
           align-items: center;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+}
+
+main .fonctionnement .onglet1 .icon {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #9356DC;
+  border-radius: 50px;
+  margin-left: -30px;
+  color: white;
+  font-family: -webkit-body;
+  font-size: 30px;
 }
 
 main .fonctionnement .onglet1 .fa-mobile-screen-button {
@@ -129,9 +157,9 @@ main .fonctionnement .onglet1 .fa-mobile-screen-button {
 
 main .fonctionnement .onglet2 {
   margin-top: 100px;
-  border: 1px solid;
+  border: 1px solid #e8e3e3;
   border-radius: 50px 50px 50px 50px;
-  width: 850px;
+  width: 90%;
   height: 150px;
   font-size: 40px;
   background-color: #f2efef5c;
@@ -146,6 +174,20 @@ main .fonctionnement .onglet2 {
           align-items: center;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+}
+
+main .fonctionnement .onglet2 .icon {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #9356DC;
+  border-radius: 50px;
+  margin-left: -30px;
+  color: white;
+  font-family: -webkit-body;
+  font-size: 30px;
 }
 
 main .fonctionnement .onglet2 .fa-bars {
@@ -157,9 +199,9 @@ main .fonctionnement .onglet2 .fa-bars {
 
 main .fonctionnement .onglet3 {
   margin-top: 100px;
-  border: 1px solid;
+  border: 1px solid #e8e3e3;
   border-radius: 50px 50px 50px 50px;
-  width: 850px;
+  width: 90%;
   height: 150px;
   font-size: 40px;
   background-color: #f2efef5c;
@@ -174,6 +216,20 @@ main .fonctionnement .onglet3 {
           align-items: center;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+}
+
+main .fonctionnement .onglet3 .icon {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #9356DC;
+  border-radius: 50px;
+  margin-left: -30px;
+  color: white;
+  font-family: -webkit-body;
+  font-size: 30px;
 }
 
 main .fonctionnement .onglet3 .fa-store {
@@ -202,7 +258,7 @@ main .restaurant .liencarte {
 
 main .restaurant .liencarte .image-card {
   height: 500px;
-  width: 900px;
+  width: 93%;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: auto;
@@ -226,8 +282,8 @@ main .restaurant .card {
   width: 180px;
   text-align: center;
   position: absolute;
-  left: 715px;
-  bottom: -660px;
+  left: 730px;
+  top: 2275px;
 }
 
 .card .liencarte .bloc-card .new2 {
@@ -238,17 +294,16 @@ main .restaurant .card {
   width: 180px;
   text-align: center;
   position: absolute;
-  left: 715px;
-  bottom: -1375px;
+  left: 730px;
+  top: 2990px;
 }
 
 main .restaurant .card-body {
-  padding-left: 50px;
   background-color: white;
   border: 1px solid grey;
   margin-right: auto;
   margin-left: auto;
-  width: 846px;
+  width: 93%;
   height: 150px;
   border-radius: 0px 0px 50px 50px;
   font-size: 30px;
@@ -259,17 +314,24 @@ main .restaurant .card-body {
   display: flex;
 }
 
+main .restaurant .card-body .card-title {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+}
+
 main .restaurant .card-body .card-title p {
   margin: 17px;
   font-size: 45px;
 }
 
 main .restaurant .card-heart {
-  padding-left: 380px;
   padding-top: 50px;
   font-size: 50px;
   color: #8b8686;
   font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .restaurant .cite-rouge {
@@ -289,6 +351,11 @@ footer .end {
   padding-bottom: 60px;
   font-size: 26px;
   height: 390px;
+}
+
+footer .end a {
+  text-decoration: none;
+  color: white;
 }
 
 footer .end h1 {

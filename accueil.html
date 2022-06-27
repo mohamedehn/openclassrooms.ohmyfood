@@ -8,7 +8,7 @@
     <!-- Ci-dessous kit pour icons via fontawesome-->
     <script src="https://kit.fontawesome.com/d91440ce15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/main.css">
-    <title>ohmyfood</title>
+    <title>ohmyfood - Accueil</title>
 </head>
 <body>
     <header>
@@ -16,13 +16,10 @@
             <p>ohmyfood</p>
         </div>
         <div class="localisation">                                   
-            <!-- Ici nous indiquerons la fonction "rechercher" du site web-->
-            <form method="post" action="traitement.php">
                 <div class="formulaire">
                     <div> <i class="fa-solid fa-location-dot"></i> </div>
                     <div> <input type="search" placeholder="Paris, Belleville" name="zonederecherche" id="ville" class="search" /> </div>
                 </div> 
-            </form>  
         </div>
         <div class="accueil">
             <h1>Réserver le menu qui vous convient</h1>
@@ -36,14 +33,17 @@
         <section class="fonctionnement">
             <h1>Fonctionnement</h1> 
             <div class="onglet1">
+                <span class="icon">1</span>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <p>Choisissez un restaurant</p>
             </div>
             <div class="onglet2">
+                <span class="icon">2</span>
                 <i class="fas fa-regular fa-bars"></i>
                 <p>Composez votre menu</p>
             </div>
             <div class="onglet3">
+                <span class="icon">3</span>
                 <i class="fas fa-regular fa-store"></i>
                 <p>Dégustez au restaurant</p>
             </div>
@@ -51,13 +51,12 @@
         <section class="restaurant">
             <h1>Restaurants</h1>
             <div class="card">
-                <a href="#" class="liencarte">
+                <a href="la palette du goût.html" class="liencarte">
                     <div class="bloc-card">
                        <!-- Image -->
-                       <div class="card"> <img src="images/palette.png" alt="image-card"class="image-card" />
+                       <div class="card"> <img src="images/palette.png" alt="image-card"class="image-card" /> <p class="new1">Nouveau</p>
                        </div>
                        <!-- Fin de l'image -->
-                       <p class="new1">Nouveau</p>
                        <!-- Corp de l'image -->
                        <div class="card-body">
                           <!-- Titre -->
@@ -73,13 +72,12 @@
                  </a>
             </div>
             <div class="card">
-                <a href="#" class="liencarte">
+                <a href="note enchantee.html" class="liencarte">
                     <div class="bloc-card">
                        <!-- Image -->
-                       <div class="card"> <img src="images/note.png" alt="image-card"class="image-card" />
+                       <div class="card"> <img src="images/note.png" alt="image-card"class="image-card" /> <p class="new2">Nouveau</p>
                        </div>
                        <!-- Fin de l'image -->
-                       <p class="new2">Nouveau</p>
                        <!-- Corp de l'image -->
                        <div class="card-body">
                           <!-- Titre -->
@@ -95,7 +93,7 @@
                  </a>
             </div>
             <div class="card">
-                <a href="#" class="liencarte">
+                <a href="a la française.html" class="liencarte">
                     <div class="bloc-card">
                        <!-- Image -->
                        <div class="card"> <img src="images/francaise.png" alt="image-card"class="image-card" />
@@ -116,7 +114,7 @@
                  </a>
             </div>
             <div class="card">
-                <a href="#" class="liencarte">
+                <a href="le delice des sens.html" class="liencarte">
                     <div class="bloc-card">
                        <!-- Image -->
                        <div class="card"> <img src="images/delice.png" alt="image-card"class="image-card" />
@@ -144,7 +142,7 @@
             <li><i class="fa-solid fa-utensils"></i> <span>Proposer un restaurant</span></li>
             <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
             <li>Mentions légales</li>
-            <li>Contact</li>
+            <li> <a href="mailto:contact@gmail.com">Contact</a> </li>
         </div>
     </footer>
 </body>

@@ -41,14 +41,24 @@ header .accueil{
     font-size: 30px;
     text-align: center;
     background-color: #f2efef5c;
-    .h1{
+    h1{
         font-weight: 900;
+        width: 65%;
+        text-align: center;
+        display: inline-block;
+    }
+    p{
+        font-size: 50px;
+        margin: 0;
     }
     .btn-explo{
         @include btn-explo;
             p{
                 color: white;
-                font-weight: bolder;
+                font-weight: 500;
+                display: contents;
+                font-size: 45px;
+                font-family: 'Roboto-ui';
             }
     }
 }
@@ -57,7 +67,7 @@ main .fonctionnement{
     margin-top: 115px;
         h1{
             font-weight: 900;
-            padding-left: 40px;
+            padding-left: 4%;
             font-size: 42px;
         }
 }
@@ -109,19 +119,23 @@ main .restaurant .card{
 .card .liencarte .bloc-card .new1{
     @include new;
     position: absolute;
-    left: 715px;
-    bottom: -660px;
+    left: 730px;
+    top: 2275px;
 }
 
 .card .liencarte .bloc-card .new2{
     @include new;
     position: absolute;
-    left: 715px;
-    bottom: -1375px;
+    left: 730px;
+    top: 2990px;
 }
 
 main .restaurant .card-body{
     @include card-body;
+}
+
+main .restaurant .card-body .card-title{
+    flex-basis: 90%
 }
 
 main .restaurant .card-body .card-title p{

@@ -7,9 +7,9 @@
 
 @mixin onglet ($marginTop){
     margin-top: $marginTop;
-    border: 1px solid;
+    border: 1px solid #e8e3e3;
     border-radius: 50px 50px 50px 50px;
-    width: 850px;
+    width: 90%;
     height: 150px;
     font-size: 40px;
     background-color: #f2efef5c;
@@ -18,6 +18,19 @@
     align-items: center;
     margin-right: auto;
     margin-left: auto;
+    position: relative;
+        .icon{
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            padding: 10px 22px;
+            background-color: #9356DC;
+            border-radius: 50px;
+            margin-left: -30px;
+            color: white;
+            font-family: -webkit-body;
+            font-size: 30px;
+        }
 }
 
 @mixin onglet-icons{
@@ -27,19 +40,20 @@
 }
 
 @mixin btn-explo{
-    border: 2px solid;
+    border: 0.5px solid;
     border-radius: 50px 50px 50px 50px;
-    width: 600px;
+    width: 52%;
     display: inline-block;
-    font-size: 45px;
-    margin-top: 30px;
-    height: 135px;
+    margin-top: 65px;
     background: $color-violet;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 6px 6px 6px #cdcdcd45;
 }
 
 @mixin image{
     height: 500px;
-    width: 900px;
+    width: 93%;
     object-fit: cover;
     margin-right: auto;
     margin-left: auto;
@@ -53,12 +67,11 @@
 }
 
 @mixin card-body{
-    padding-left: 50px;
     background-color: white;
     border: 1px solid grey;
     margin-right: auto;
     margin-left: auto;
-    width: 846px;
+    width: 93%;
     height: 150px;
     border-radius: 0px 0px 50px 50px;
     font-size: 30px;
@@ -73,11 +86,11 @@
 }
 
 @mixin card-heart {
-    padding-left: 380px;
     padding-top: 50px;
     font-size: 50px;
     color: #8b8686;
     font-weight: normal;
+    display: flex;
 }
 
 @mixin footer-li {
@@ -93,6 +106,10 @@
     padding-bottom: 60px;
     font-size: 26px;
     height: 390px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
 }
 
 @mixin new{
@@ -133,16 +150,20 @@
 }
 
 @mixin btn-cmd {
-    border: 2px solid;
+    border: 0.5px solid;
     border-radius: 50px 50px 50px 50px;
-    width: 400px;
+    width: 45%;
     font-size: 45px;
     margin-top: 30px;
-    height: 135px;
     background: $color-violet;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
     margin-top: 105px;
     margin-bottom: 125px;
+    box-shadow: 6px 6px 6px #cdcdcd45;
+        p{
+            color: white;
+            font-family: 'Roboto-ui';
+        }
 }
