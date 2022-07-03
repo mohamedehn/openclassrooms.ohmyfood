@@ -109,6 +109,14 @@ footer .end {
     }
 }
 
+footer .end .end-list{
+    @include desktop-only{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+}
+
 footer .end li i{
     font-size: 35px;
 }

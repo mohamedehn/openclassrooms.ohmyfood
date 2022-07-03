@@ -172,6 +172,12 @@ footer .end {
   height: 390px;
 }
 
+@media screen and (min-width: 992px) {
+  footer .end {
+    height: 230px;
+  }
+}
+
 footer .end a {
   text-decoration: none;
   color: white;
@@ -192,6 +198,18 @@ footer .end li {
 
 footer .end li span {
   padding-left: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  footer .end .end-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+  }
 }
 
 footer .end li i {
