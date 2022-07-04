@@ -4,7 +4,8 @@
 
 /*Ci-dessous SCSS pour la page d'accueil*/
 
-header .titre{
+header{
+    .titre{
     display: flex;
     font-weight: bold;
     font-family: 'Shrikhand', cursive;
@@ -12,215 +13,204 @@ header .titre{
     font-size: 70px;
     margin-bottom: -55px;
     margin-top: -50px;
-}
-
-header .localisation .formulaire{
-    background-color: rgba(211, 211, 211, 0.758);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    font-size: 40px;
-    height: 120px;
-    .search{
-        border: none;
-        background-color: #babab000;
-        font-size: 35px;
-        font-weight: 600;
-        outline:none;
-        margin-left: 40px;
-}
-    .fa-solid{
-        margin-left: 100px;
     }
-}
-
-header .accueil{
-    padding-top: 80px;
-    padding-bottom: 125px;
-    font-size: 30px;
-    text-align: center;
-    background-color: #f2efef5c;
-    h1{
-        font-weight: 900;
-        width: 65%;
+    .localisation{
+        .formulaire{
+        background-color: rgba(211, 211, 211, 0.758);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        font-size: 40px;
+        height: 120px;
+            .search{
+                border: none;
+                background-color: #babab000;
+                font-size: 35px;
+                font-weight: 600;
+                outline:none;
+                margin-left: 40px;
+            }
+            .fa-solid{
+                margin-left: 100px;
+            }
+        }
+    }
+    .accueil{
+        padding-top: 80px;
+        padding-bottom: 125px;
+        font-size: 30px;
         text-align: center;
-        display: inline-block;
-    }
-    p{
-        font-size: 50px;
-        margin: 0;
-    }
-    .btn-explo{
-        @include btn-explo;
-            p{
-                color: white;
-                font-weight: 500;
-                display: contents;
-                font-size: 45px;
-                font-family: 'Roboto-ui';
-            &:hover{
-                color: $hover-color;
-            }
-            }
-            a{
-                text-decoration: none;
-            }
-    }
-    
-}
-
-main .fonctionnement{
-    margin-top: 115px;
+        background-color: #f2efef5c;
         h1{
             font-weight: 900;
-            padding-left: 4%;
-            font-size: 42px;
+            width: 65%;
+            text-align: center;
+            display: inline-block;
         }
-}
-
-main .fonctionnement .onglets{
-    @include desktop-only {
-        display: flex;
-        flex-wrap: wrap;
+        p{
+            font-size: 50px;
+            margin: 0;
+        }
+        .btn-explo{
+            @include btn-explo;
+                p{
+                    color: white;
+                    font-weight: 500;
+                    display: contents;
+                    font-size: 45px;
+                    font-family: 'Roboto-ui';
+                &:hover{
+                    color: $hover-color;
+                }
+                }
+                a{
+                    text-decoration: none;
+                }
+        }
+        
     }
 }
 
-main .fonctionnement .onglet1{
-    @include onglet (100px);
-    @include desktop-only {
-        width: 45%;
+main{
+    @include max-width();
+    .fonctionnement{
+        margin-top: 115px;
+            h1{
+                font-weight: 900;
+                padding-left: 4%;
+                font-size: 42px;
+            }
+            .onglets{
+                @include desktop-only {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .onglet1{
+                    @include onglet (100px);
+                    @include desktop-only {
+                        width: 45%;
+                    }
+                        .fa-mobile-screen-button{
+                            @include onglet-icons;
+                        }
+                    &:hover{
+                        background-color: $hover-color;
+                    }
+                }
+                .onglet2{
+                    @include onglet (100px);
+                    @include desktop-only {
+                        width: 45%;
+                    }
+                        .fa-bars{
+                            @include onglet-icons;
+                        }
+                    &:hover{
+                        background-color: $hover-color;
+                        }
+                }
+                .onglet3{
+                    @include onglet (100px);
+                    @include desktop-only {
+                        width: 45%;
+                    }
+                        .fa-store{
+                            @include onglet-icons
+                        }
+                    &:hover{
+                        background-color: $hover-color;
+                        }
+                }
+            }
     }
-        .fa-mobile-screen-button{
-            @include onglet-icons;
-        }
-    &:hover{
-        background-color: $hover-color;
-    }
-}
-
-main .fonctionnement .onglet2{
-    @include onglet (100px);
-    @include desktop-only {
-        width: 45%;
-    }
-        .fa-bars{
-            @include onglet-icons;
-        }
-    &:hover{
-        background-color: $hover-color;
-        }
-}
-
-main .fonctionnement .onglet3{
-    @include onglet (100px);
-    @include desktop-only {
-        width: 45%;
-    }
-        .fa-store{
-            @include onglet-icons
-        }
-    &:hover{
-        background-color: $hover-color;
-        }
-}
-
-main .restaurant{
-    background-color: #f2efef5c;
-    margin-top: 150px;
-    padding-bottom: 150px;
-    height: auto;
+    .restaurant{
+        background-color: #f2efef5c;
+        margin-top: 150px;
+        padding-bottom: 150px;
+        height: auto;
         h1{
             font-weight: 900;
             padding-left: 40px;
             font-size: 42px;
             padding-top: 125px;
         }
-}
-
-main .restaurant .liencarte{
-    text-decoration: none;
-        .image-card{
-            @include image;
-}
-}
-
-main .restaurant .restaurant-cards{
-    @include desktop-only{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-}
-
-main .restaurant .card{
-    @include card;
-}
-
-.card .liencarte .bloc-card .new1{
-    @include new;
-    position: absolute;
-    right: 65px;
-    top: 2390px;
-}
-
-.card .liencarte .bloc-card .new2{
-    @include new;
-    position: absolute;
-    right: 65px;
-    top: 3115px;
-}
-
-main .restaurant .card-body{
-    @include card-body;
-}
-
-main .restaurant .card-body .card-title{
-    flex-basis: 90%
-}
-
-main .restaurant .card-body .card-title p{
-    @include card-text;
-}
-
-main .restaurant .card-heart{
-    @include card-heart;
-}
-
-main .restaurant .cite-rouge{
-    width: 390px;
-}
-
-footer{
-    margin-top: -103px;
-}
-
-footer .end{
-    @include footer-end;
-        h1{
-            font-family: 'Shrikhand';
+        .restaurant-cards{
+            @include desktop-only{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                }
+                .card{
+                    position: relative;
+                    margin-top: 70px;
+                    width: 90%;
+                    margin-right: auto;
+                    margin-left: auto;
+                    @include desktop-only{
+                        width: 48%;
+                    }
+                    .liencarte {
+                        display: block;
+                        text-decoration: none;
+                        .card-top {
+                            .image-card{
+                                @include image;
+                            }
+                            .new{
+                                @include new;
+                                position: absolute;
+                                right: 65px;
+                                top: 0px;
+                            }
+                        }
+                    }
+                    .card-body{
+                        @include card-body;
+                        .card-title{
+                            flex-basis: 90%;
+                            p{
+                                @include card-text;
+                            }
+                        }
+                        .card-heart{
+                            @include card-heart;
+                            &:active{
+                                color: $heart-animation;
+                            }
+                        }
+                    }
+                }
         }
-}
+    }
+} 
 
-footer .end {
-    @include footer-li;
-    & li{
+#footer {
+    @include footer-end();
+    h1{
+        font-family: 'Shrikhand';
+    }
+    .end{
+        @include max-width();
         @include footer-li;
-        font-size: 40px;
-        span {
-            padding-left: 15px;
+        & li{
+            @include footer-li;
+            font-size: 40px;
+            span {
+                padding-left: 15px;
+            }
         }
+        .end-list{
+            @include desktop-only{
+                display: flex;
+                justify-content: space-between;
+                width: 95%;
+            }
+        }
+        li{
+            i{
+                font-size: 35px;
+            }     
+        } 
     }
-}
-
-footer .end .end-list{
-    @include desktop-only{
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-    }
-}
-
-footer .end li i{
-    font-size: 35px;
 }

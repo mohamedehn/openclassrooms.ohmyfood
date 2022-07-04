@@ -1,5 +1,4 @@
 * {
-  max-width: 1500px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-sizing: content-box;
@@ -157,51 +156,48 @@ main .menu .btn-cmd p {
   font-family: 'Roboto-ui';
 }
 
-footer {
-  margin-top: -105px;
-}
-
-footer .end {
+#footer {
   background-color: #383434;
   color: white;
-  margin-top: 110px;
   list-style-type: none;
   padding-left: 50px;
   padding-bottom: 60px;
   font-size: 26px;
-  height: 390px;
+  height: auto;
 }
 
 @media screen and (min-width: 992px) {
-  footer .end {
+  #footer {
     height: 230px;
   }
 }
 
-footer .end a {
+#footer a {
   text-decoration: none;
   color: white;
 }
 
-footer .end h1 {
+#footer h1 {
   font-family: 'Shrikhand';
 }
 
-footer .end {
+#footer .end {
+  max-width: 1500px;
+  margin: auto;
   padding-top: 20px;
 }
 
-footer .end li {
+#footer .end li {
   padding-top: 20px;
   font-size: 40px;
 }
 
-footer .end li span {
+#footer .end li span {
   padding-left: 15px;
 }
 
 @media screen and (min-width: 992px) {
-  footer .end .end-list {
+  #footer .end .end-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -212,7 +208,7 @@ footer .end li span {
   }
 }
 
-footer .end li i {
+#footer .end li i {
   font-size: 35px;
 }
 /*# sourceMappingURL=menu.css.map */
