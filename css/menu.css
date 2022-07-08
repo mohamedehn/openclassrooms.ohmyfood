@@ -74,6 +74,62 @@ main .menu .title {
       justify-content: space-around;
 }
 
+main .menu .title .menu-heart {
+  position: relative;
+}
+
+main .menu .title .menu-heart .heart1 {
+  position: relative;
+  left: 24px;
+}
+
+main .menu .title .menu-heart .heart1:hover {
+  opacity: 0;
+}
+
+main .menu .title .menu-heart .heart1:active {
+  opacity: 0;
+}
+
+main .menu .title .menu-heart .heart2 {
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  position: relative;
+  right: 30px;
+  top: 6px;
+  opacity: 0;
+}
+
+main .menu .title .menu-heart .heart2:hover {
+  opacity: 100;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1330ms ease-in-out;
+  transition: -webkit-transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
+  overflow: hidden;
+}
+
+main .menu .title .menu-heart .heart2:active {
+  opacity: 100;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1330ms ease-in-out;
+  transition: -webkit-transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
+  overflow: hidden;
+}
+
 main .menu .sous-titre {
   font-size: 40px;
   margin-right: 50px;
@@ -104,23 +160,18 @@ main .menu .card a .bloc-menu .menu-title {
   padding: 25px;
 }
 
-main .menu .card a .bloc-menu p {
+main .menu .card a .bloc-menu .menu-title p {
   padding: 0px;
   margin: 0px;
   padding-left: 25px;
 }
 
-main .menu .card a .bloc-menu .title1 {
+main .menu .card a .bloc-menu .menu-title .title1 {
   text-shadow: 0 0 black;
   font-weight: bolder;
 }
 
-main .menu .card a .bloc-menu span {
-  font-weight: bolder;
-  text-shadow: 0 0 black;
-}
-
-main .menu .card .bloc-menu .menu-subtitle {
+main .menu .card a .bloc-menu .menu-title .menu-subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,7 +180,12 @@ main .menu .card .bloc-menu .menu-subtitle {
           justify-content: space-between;
 }
 
-main .menu .card .subtitle {
+main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
+  font-weight: bolder;
+  text-shadow: 0 0 black;
+}
+
+main .menu .card a .bloc-menu .menu-title .menu-subtitle .subtitle {
   display: inline;
   font-weight: 100;
 }
@@ -149,6 +205,13 @@ main .menu .btn-cmd {
   margin-bottom: 125px;
   -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
           box-shadow: 6px 6px 6px #cdcdcd45;
+}
+
+main .menu .btn-cmd:hover {
+  -webkit-box-shadow: 50px 50px 50px #cdcdcd45;
+          box-shadow: 50px 50px 50px #cdcdcd45;
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
 }
 
 main .menu .btn-cmd p {

@@ -16,6 +16,51 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
+@-webkit-keyframes heart-progress {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes heart-progress {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
 /*Ci-dessous SCSS pour la page d'accueil*/
 header .titre {
   display: -webkit-box;
@@ -90,8 +135,16 @@ header .accueil .btn-explo {
   background: linear-gradient(0deg, #e263f2f7, #b077f4);
   text-align: center;
   padding: 20px;
+  cursor: pointer;
   -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
           box-shadow: 6px 6px 6px #cdcdcd45;
+}
+
+header .accueil .btn-explo:hover {
+  -webkit-box-shadow: 50px 50px 50px #cdcdcd45;
+          box-shadow: 50px 50px 50px #cdcdcd45;
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
 }
 
 @media screen and (min-width: 992px) {
@@ -398,20 +451,72 @@ main .restaurant .restaurant-cards .card .card-body .card-title {
 main .restaurant .restaurant-cards .card .card-body .card-title p {
   margin: 17px;
   font-size: 45px;
+  cursor: pointer;
 }
 
 main .restaurant .restaurant-cards .card .card-body .card-heart {
   padding-top: 50px;
   font-size: 50px;
   color: #8b8686;
-  font-weight: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .restaurant .restaurant-cards .card .card-body .card-heart:active {
-  color: #f394fff7;
+main .restaurant .restaurant-cards .card .card-body .card-heart:hover {
+  opacity: 0;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart:focus {
+  opacity: 0;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart2 {
+  padding-top: 50px;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 53px;
+  opacity: 0;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart2 .heart2 {
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  position: relative;
+  bottom: 17.5px;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart2:hover {
+  opacity: 100;
+  cursor: pointer;
+  -webkit-transform: scale(3.1);
+          transform: scale(3.1);
+  -webkit-transition: -webkit-transform 1330ms ease-in-out;
+  transition: -webkit-transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
+  overflow: hidden;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart2:active {
+  opacity: 100;
+  cursor: pointer;
+  -webkit-transform: scale(3.1);
+          transform: scale(3.1);
+  -webkit-transition: -webkit-transform 1330ms ease-in-out;
+  transition: -webkit-transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out;
+  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
+  overflow: hidden;
 }
 
 #footer {
