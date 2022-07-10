@@ -1,17 +1,86 @@
-@keyframes heart-progress {
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveletter{
     0% {
-        transform: scaleX(0);
+        -webkit-transform: translateX(-65px);
+        transform: translateX(-65px);
+        opacity: 0;
     }
-    17% {
-        transform: scaleX(.18);
+    20% {
+        opacity: 0.1;
     }
-    24% {
-        transform: scaleX(.4);
+    40% {
+        opacity: 0.6;
     }
-    46% {
-        transform: scaleX(.81);
+    1% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.9;
     }
     100% {
-        transform: scaleX(1);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide-loader {
+    0% {
+        opacity: 1;
+    }
+    
+    20% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.4;
+    }
+    85% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    95% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes movemenu{
+    0% {
+        -webkit-transform: translateX(-65px);
+        transform: translateX(-65px);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    1% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
     }
 }

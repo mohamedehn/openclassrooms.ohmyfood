@@ -25,17 +25,26 @@ header .titre {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 70px;
   margin-bottom: -55px;
   margin-top: -50px;
 }
 
-header .titre i {
-  position: relative;
-  top: 87px;
-  right: 230px;
+header .titre a i {
   font-size: 50px;
   color: #676464;
+}
+
+header .titre p {
+  -ms-flex-preferred-size: 62%;
+      flex-basis: 62%;
 }
 
 header .card {
@@ -205,6 +214,7 @@ main .menu .btn-cmd {
   margin-bottom: 125px;
   -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
           box-shadow: 6px 6px 6px #cdcdcd45;
+  cursor: pointer;
 }
 
 main .menu .btn-cmd:hover {
@@ -252,7 +262,7 @@ main .menu .btn-cmd p {
 
 #footer .end li {
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #footer .end li span {

@@ -16,52 +16,307 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
-@-webkit-keyframes heart-progress {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  17% {
-    -webkit-transform: scaleX(0.18);
-            transform: scaleX(0.18);
-  }
-  24% {
-    -webkit-transform: scaleX(0.4);
-            transform: scaleX(0.4);
-  }
-  46% {
-    -webkit-transform: scaleX(0.81);
-            transform: scaleX(0.81);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-@keyframes heart-progress {
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moveletter {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
   }
-  17% {
-    -webkit-transform: scaleX(0.18);
-            transform: scaleX(0.18);
+  20% {
+    opacity: 0.1;
   }
-  24% {
-    -webkit-transform: scaleX(0.4);
-            transform: scaleX(0.4);
+  40% {
+    opacity: 0.6;
   }
-  46% {
-    -webkit-transform: scaleX(0.81);
-            transform: scaleX(0.81);
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveletter {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide-loader {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes movemenu {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes movemenu {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 /*Ci-dessous SCSS pour la page d'accueil*/
+html, body {
+  z-index: 1;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  z-index: 10;
+  background-color: white;
+  -webkit-animation: hide-loader 0s 3s both;
+          animation: hide-loader 0s 3s both;
+}
+
+.loader .loader__title {
+  margin: auto;
+  position: relative;
+  top: 240px;
+  font-size: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loader .loader__title p {
+  font-weight: bold;
+  font-family: 'Shrikhand', cursive;
+}
+
+.loader .loader__title .letter1 {
+  -webkit-animation: moveletter 1.5s 0.2s both;
+          animation: moveletter 1.5s 0.2s both;
+}
+
+.loader .loader__title .letter2 {
+  -webkit-animation: moveletter 1.5s 0.3s both;
+          animation: moveletter 1.5s 0.3s both;
+}
+
+.loader .loader__title .letter3 {
+  -webkit-animation: moveletter 1.5s 0.4s both;
+          animation: moveletter 1.5s 0.4s both;
+}
+
+.loader .loader__title .letter4 {
+  -webkit-animation: moveletter 1.5s 0.5s both;
+          animation: moveletter 1.5s 0.5s both;
+}
+
+.loader .loader__title .letter5 {
+  -webkit-animation: moveletter 1.5s 0.6s both;
+          animation: moveletter 1.5s 0.6s both;
+}
+
+.loader .loader__title .letter6 {
+  -webkit-animation: moveletter 1.5s 0.7s both;
+          animation: moveletter 1.5s 0.7s both;
+}
+
+.loader .loader__title .letter7 {
+  -webkit-animation: moveletter 1.5s 0.8s both;
+          animation: moveletter 1.5s 0.8s both;
+}
+
+.loader .loader__title .letter8 {
+  -webkit-animation: moveletter 1.5s 0.9s both;
+          animation: moveletter 1.5s 0.9s both;
+}
+
+.loader .load {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.loader .load__spinner {
+  border-top: 10px solid #9356DC;
+  height: 300px;
+  border-radius: 50%;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: spin 3000ms 2s linear infinite;
+          animation: spin 3000ms 2s linear infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.loader .load__spinner--1 {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+.loader .load__spinner .load__spinner2 {
+  border-bottom: 10px solid #FF79DA;
+  height: 300px;
+  border-radius: 50%;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: spin 3000ms 2s linear infinite;
+          animation: spin 3000ms 2s linear infinite;
+  animation-direction: reverse;
+}
+
+.loader .load__spinner .load__spinner2--1 {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
 header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -552,7 +807,7 @@ main .restaurant .restaurant-cards .card .card-body .card-heart2:active {
 
 #footer .end li {
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #footer .end li span {

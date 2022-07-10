@@ -5,6 +5,95 @@
 
 /*Ci-dessous SCSS pour la page d'accueil*/
 
+html, body{
+    z-index: 1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.loader{
+    display: grid;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    z-index: 10;
+    background-color: white;
+    animation: hide-loader 0s 3s both;
+    .loader__title{
+        margin: auto;
+        position: relative;
+        top: 240px;
+        font-size: 34px;
+        display: flex;
+            p{
+                font-weight: bold;
+                font-family: 'Shrikhand', cursive;
+            }
+            .letter1{
+                animation: moveletter 1.5s 0.2s both;
+            }
+            .letter2{
+                animation: moveletter 1.5s 0.3s both;
+            }
+            .letter3{
+                animation: moveletter 1.5s 0.4s both;
+            }
+            .letter4{
+                animation: moveletter 1.5s 0.5s both;
+            }
+            .letter5{
+                animation: moveletter 1.5s 0.6s both;
+            }
+            .letter6{
+                animation: moveletter 1.5s 0.7s both;
+            }
+            .letter7{
+                animation: moveletter 1.5s 0.8s both;
+            }
+            .letter8{
+                animation: moveletter 1.5s 0.9s both;
+            }
+    }
+    .load {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        &__spinner {
+            border-top: 10px solid #9356DC;
+            height: 300px;
+            border-radius: 50%;
+            width: 300px;
+            display: flex;
+            animation: spin $anim-dur 2s linear infinite;
+            animation-direction: normal;
+            @for $i from 1 through 1 {
+                &--#{$i} {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+            .load__spinner2{
+                border-bottom: 10px solid #FF79DA;
+                height: 300px;
+                border-radius: 50%;
+                width: 300px;
+                display: flex;
+                animation: spin $anim-dur 2s linear infinite;
+                animation-direction: reverse;
+                @for $i from 1 through 1 {
+                    &--#{$i} {
+                        animation-delay: $anim-delay * $i;
+                    }
+                }
+            }
+        }
+    }
+} 
+
 header{
     .titre{
     display: flex;
@@ -211,7 +300,7 @@ main{
         @include footer-li;
         & li{
             @include footer-li;
-            font-size: 40px;
+            font-size: 35px;
             span {
                 padding-left: 15px;
             }

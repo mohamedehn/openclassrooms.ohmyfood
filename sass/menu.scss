@@ -8,16 +8,22 @@ header{
         font-weight: bold;
         font-family: 'Shrikhand', cursive;
         justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
         font-size: 70px;
         margin-bottom: -55px;
         margin-top: -50px;
-            i{
-                position: relative;
-                top: 87px;
-                right: 230px;
-                font-size: 50px;
-                color: #676464;
+            a{
+                i{
+                    font-size: 50px;
+                    color: #676464;
+                }
             }
+            p{
+                flex-basis: 62%;
+            }
+            
     }
     .card{
         z-index: 1;
@@ -84,6 +90,7 @@ main{
             .card{
                 a{
                     text-decoration: none;
+
                         .bloc-menu{
                             @include bloc-menu;
                             .menu-title{
@@ -131,7 +138,7 @@ main{
         @include footer-li;
         & li{
             @include footer-li;
-            font-size: 40px;
+            font-size: 35px;
             span {
                 padding-left: 15px;
             }
