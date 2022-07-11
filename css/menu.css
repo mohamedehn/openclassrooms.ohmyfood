@@ -16,6 +16,212 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moveletter {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveletter {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes movemenu {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes movemenu {
+  0% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  1% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes choice-menu {}
+
+@keyframes choice-menu {}@-webkit-keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}@keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+body {
+  height: 100%;
+  position: relative;
+}
+
 header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,8 +354,16 @@ main .menu .sous-titre {
   text-underline-position: under;
 }
 
+main .menu .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main .menu .card a {
   text-decoration: none;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 main .menu .card a .bloc-menu {
@@ -162,11 +376,16 @@ main .menu .card a .bloc-menu {
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .menu .card a .bloc-menu .menu-title {
   color: black;
   padding: 25px;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 main .menu .card a .bloc-menu .menu-title p {
@@ -197,6 +416,33 @@ main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
 main .menu .card a .bloc-menu .menu-title .menu-subtitle .subtitle {
   display: inline;
   font-weight: 100;
+}
+
+main .menu .card a .bloc-menu .check {
+  background: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 142px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0px 30px 30px 0px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+main .menu .card a .bloc-menu .check i {
+  color: white;
+  font-size: 30px;
+}
+
+main .menu .card a .bloc-menu .check:hover {
+  -webkit-transform: translateX(-140px);
+          transform: translateX(-140px);
 }
 
 main .menu .btn-cmd {

@@ -90,6 +90,7 @@ body {
 @-webkit-keyframes hide-loader {
   0% {
     opacity: 1;
+    z-index: 10;
   }
   20% {
     opacity: 0.6;
@@ -111,12 +112,14 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
 @keyframes hide-loader {
   0% {
     opacity: 1;
+    z-index: 10;
   }
   20% {
     opacity: 0.6;
@@ -138,6 +141,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -191,12 +195,32 @@ body {
   }
 }
 
+@-webkit-keyframes choice-menu {}
+
+@keyframes choice-menu {}@-webkit-keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}@keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 /*Ci-dessous SCSS pour la page d'accueil*/
-html, body {
-  z-index: 1;
+body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
 
 .loader {
@@ -205,10 +229,13 @@ html, body {
   position: absolute;
   margin-right: auto;
   margin-left: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   min-height: 100%;
-  z-index: 10;
   background-color: white;
   -webkit-animation: hide-loader 0s 3s both;
           animation: hide-loader 0s 3s both;
@@ -217,7 +244,7 @@ html, body {
 .loader .loader__title {
   margin: auto;
   position: relative;
-  top: 240px;
+  top: -43%;
   font-size: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,6 +302,8 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 4%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -469,6 +498,7 @@ main .fonctionnement .onglets .onglet1 {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  cursor: pointer;
 }
 
 main .fonctionnement .onglets .onglet1 .icon {
@@ -521,6 +551,7 @@ main .fonctionnement .onglets .onglet2 {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  cursor: pointer;
 }
 
 main .fonctionnement .onglets .onglet2 .icon {
@@ -573,6 +604,7 @@ main .fonctionnement .onglets .onglet3 {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  cursor: pointer;
 }
 
 main .fonctionnement .onglets .onglet3 .icon {
@@ -716,62 +748,74 @@ main .restaurant .restaurant-cards .card .card-body .card-heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-main .restaurant .restaurant-cards .card .card-body .card-heart:hover {
-  opacity: 0;
-}
-
-main .restaurant .restaurant-cards .card .card-body .card-heart:focus {
-  opacity: 0;
-}
-
-main .restaurant .restaurant-cards .card .card-body .card-heart2 {
-  padding-top: 50px;
-  font-size: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  right: 53px;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart .heart1 {
+  opacity: 1;
+  font-size: 54px;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart .heart2 {
+  position: relative;
+  right: 50px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
   opacity: 0;
 }
 
-main .restaurant .restaurant-cards .card .card-body .card-heart2 .heart2 {
+main .restaurant .restaurant-cards .card .card-body .card-heart:hover .heart1 {
+  -webkit-transition: -webkit-transform 5000s ease-in-out;
+  transition: -webkit-transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out, -webkit-transform 5000s ease-in-out;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart:hover .heart2 {
+  position: relative;
+  right: 52px;
+  top: 4px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
   background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart1 {
+  -webkit-transition: -webkit-transform 5000s ease-in-out;
+  transition: -webkit-transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out, -webkit-transform 5000s ease-in-out;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
   position: relative;
-  bottom: 17.5px;
-}
-
-main .restaurant .restaurant-cards .card .card-body .card-heart2:hover {
-  opacity: 100;
+  right: 52px;
+  top: 4px;
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
+  opacity: 1;
   cursor: pointer;
-  -webkit-transform: scale(3.1);
-          transform: scale(3.1);
-  -webkit-transition: -webkit-transform 1330ms ease-in-out;
-  transition: -webkit-transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
-  overflow: hidden;
-}
-
-main .restaurant .restaurant-cards .card .card-body .card-heart2:active {
-  opacity: 100;
-  cursor: pointer;
-  -webkit-transform: scale(3.1);
-          transform: scale(3.1);
-  -webkit-transition: -webkit-transform 1330ms ease-in-out;
-  transition: -webkit-transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
-  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
 }
 
 #footer {

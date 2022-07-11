@@ -1,6 +1,12 @@
 @import './utils/variables';
 @import './base/base';
 @import './utils/mixin';
+@import './utils/keyframes';
+
+body{
+    height: 100%;
+    position: relative;
+}
 
 header{
     .titre{
@@ -88,14 +94,16 @@ main{
                 @include sous-titre;
             }
             .card{
+                display: flex;
                 a{
                     text-decoration: none;
-
+                    flex-basis: 100%;
                         .bloc-menu{
                             @include bloc-menu;
                             .menu-title{
                                 color: black;
                                 padding: 25px;
+                                flex-basis: 80%;
                                 p{
                                     @include menu-p;
                                 }
@@ -117,8 +125,22 @@ main{
                                 }
                                 
                             }
-                
-                
+                            .check{
+                                background: #99E2D0;
+                                display: flex;
+                                height: 142px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 0px 30px 30px 0px;
+                                flex-basis: 20%;
+                                    i{
+                                        color: white;
+                                        font-size: 30px;
+                                    }
+                                &:hover{
+                                    transform: translateX(-140px);
+                                }
+                            }
                         }
                 }
             }

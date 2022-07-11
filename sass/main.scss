@@ -5,11 +5,9 @@
 
 /*Ci-dessous SCSS pour la page d'accueil*/
 
-html, body{
-    z-index: 1;
+body{
     height: 100%;
-    margin: 0;
-    padding: 0;
+    position: relative;
 }
 
 .loader{
@@ -17,16 +15,19 @@ html, body{
     position: absolute;
     margin-right: auto;
     margin-left: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     min-height: 100%;
-    z-index: 10;
     background-color: white;
     animation: hide-loader 0s 3s both;
     .loader__title{
         margin: auto;
         position: relative;
-        top: 240px;
+        top: -43%;
         font-size: 34px;
         display: flex;
             p{
@@ -62,6 +63,8 @@ html, body{
         width: 100%;
         height: 500px;
         display: flex;
+        position: absolute;
+        top: 4%;
         justify-content: space-evenly;
         &__spinner {
             border-top: 10px solid #9356DC;
@@ -264,25 +267,14 @@ main{
                             }
                         }
                         .card-heart{
-                            @include card-heart;
+                            @include card-heart();
                             &:hover{
-                                opacity: 0;
-                            }
-                            &:focus{
-                                opacity: 0;
-                            }
-                        }
-                        .card-heart2{
-                            @include card-heart2;
-                                .heart2{
-                                    @include heart2;
-                                }
-                            &:hover{
-                                @include heart-transition;                    
+                                @include heart-transition();
                             }
                             &:active{
-                                @include heart-transition;
+                                @include heart-transition();
                             }
+                                
                         }
                     }
                 }

@@ -24,6 +24,7 @@
     margin-right: auto;
     margin-left: auto;
     position: relative;
+    cursor: pointer;
         .icon{
             position: absolute;
             left: 0;
@@ -102,6 +103,17 @@
     font-size: 50px;
     color: #8b8686;
     display: flex;
+    position: relative;
+        .heart1{
+            opacity: 1;
+            font-size: 54px;
+        }
+        .heart2{
+            position: relative;
+            right: 50px;
+            transform: scale(0.3);
+            opacity: 0;
+        }
 }
 
 @mixin card-heart2 {
@@ -113,23 +125,24 @@
     opacity: 0;
 }
 
-@mixin heart2 {
-    font-weight: bold;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip:text;
-    background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
-    transform: scale(0.3);
-    position: relative;
-    bottom: 17.5px;  
-}
-
 @mixin heart-transition {
-    opacity: 100;
-    cursor: pointer;
-    transform: scale(3.1);
-    transition: transform 1330ms ease-in-out;
-    overflow: hidden;    
+    .heart1{
+        transition: transform 5000s ease-in-out;
+    }
+    .heart2{
+        position: relative;
+        right: 52px;
+        top: 4px;
+        font-weight: bold;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip:text;
+        background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 350ms ease-in-out;                  
+    }
 }
 
 @mixin footer-li {
@@ -174,6 +187,7 @@
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 40px;
+    display: flex;
 }
 
 @mixin sous-titre {
