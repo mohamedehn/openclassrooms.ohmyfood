@@ -16,7 +16,6 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
-/*Ci-dessous mixin menu-heart2 et menu heart transition avant test*/
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -218,9 +217,22 @@ body {
   }
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 body {
   height: 100%;
   position: relative;
+  font-size: 14px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
+  font-weight: 100;
 }
 
 header .titre {
@@ -239,13 +251,10 @@ header .titre {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 70px;
-  margin-bottom: -55px;
-  margin-top: -50px;
+  font-size: 30px;
 }
 
 header .titre a i {
-  font-size: 50px;
   color: #676464;
 }
 
@@ -260,17 +269,17 @@ header .card {
 }
 
 header .card .liencarte .bloc-card .image-card {
-  height: 700px;
+  margin-top: -15px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main .menu {
   height: 100%;
   width: 100%;
   background-color: #f3f3f3;
-  margin-top: -135px;
+  margin-top: -50px;
   z-index: 10;
   position: relative;
   border: 1px solid #f3f3f3;
@@ -278,7 +287,6 @@ main .menu {
 }
 
 main .menu .title {
-  font-size: 45px;
   font-family: 'Shrikhand';
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,7 +310,6 @@ main .menu .title .menu-heart .heart1 {
   position: relative;
   left: 24px;
   opacity: 1;
-  font-size: 49px;
 }
 
 main .menu .title .menu-heart .heart2 {
@@ -369,9 +376,8 @@ main .menu .title .menu-heart:active .heart2 {
 }
 
 main .menu .sous-titre {
-  font-size: 40px;
   margin-right: 50px;
-  margin-left: 50px;
+  margin-left: 25px;
   -webkit-text-decoration: underline #99E2D0;
           text-decoration: underline #99E2D0;
   text-underline-position: under;
@@ -390,15 +396,15 @@ main .menu .card a {
 }
 
 main .menu .card a .bloc-menu {
-  border: 1px solid;
-  border-radius: 25px 25px;
+  -webkit-box-shadow: 8px 8px 14px #cdcdcd70;
+          box-shadow: 8px 8px 14px #cdcdcd70;
+  border-radius: 15px 15px;
   background-color: white;
-  font-size: 40px;
-  height: 140px;
+  height: 60px;
   border-color: lightgray;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom: 40px;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,15 +412,14 @@ main .menu .card a .bloc-menu {
 
 main .menu .card a .bloc-menu .menu-title {
   color: black;
-  padding: 25px;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
+  padding: 12px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  font-size: 15px;
 }
 
 main .menu .card a .bloc-menu .menu-title p {
-  padding: 0px;
   margin: 0px;
-  padding-left: 25px;
 }
 
 main .menu .card a .bloc-menu .menu-title .title1 {
@@ -429,6 +434,7 @@ main .menu .card a .bloc-menu .menu-title .menu-subtitle {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 9px;
 }
 
 main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
@@ -446,21 +452,20 @@ main .menu .card a .bloc-menu .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 142px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0px 12px 12px 0px;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
 }
 
 main .menu .card a .bloc-menu .check i {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 main .menu .card a .bloc-menu .check:hover {
@@ -472,15 +477,13 @@ main .menu .btn-cmd {
   border: 0.5px solid;
   border-radius: 50px 50px 50px 50px;
   width: 45%;
-  font-size: 45px;
-  margin-top: 30px;
   background: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
   background: linear-gradient(0deg, #e263f2f7, #b077f4);
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 105px;
-  margin-bottom: 125px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
           box-shadow: 6px 6px 6px #cdcdcd45;
   cursor: pointer;
@@ -502,15 +505,14 @@ main .menu .btn-cmd p {
   background-color: #383434;
   color: white;
   list-style-type: none;
-  padding-left: 50px;
-  padding-bottom: 60px;
-  font-size: 26px;
+  padding-left: 20px;
+  padding-bottom: 30px;
   height: auto;
 }
 
 @media screen and (min-width: 992px) {
   #footer {
-    height: 230px;
+    height: 105px;
   }
 }
 
@@ -519,23 +521,26 @@ main .menu .btn-cmd p {
   color: white;
 }
 
-#footer h1 {
-  font-family: 'Shrikhand';
-}
-
 #footer .end {
   max-width: 1500px;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 7px;
 }
 
-#footer .end li {
-  padding-top: 20px;
-  font-size: 35px;
+#footer .end h1 {
+  font-family: 'Shrikhand';
+  font-size: 20px;
 }
 
-#footer .end li span {
-  padding-left: 15px;
+@media screen and (min-width: 992px) {
+  #footer .end {
+    padding-top: 1px;
+  }
+}
+
+#footer .end .end-list {
+  font-weight: 300;
+  font-size: 17px;
 }
 
 @media screen and (min-width: 992px) {
@@ -550,7 +555,11 @@ main .menu .btn-cmd p {
   }
 }
 
-#footer .end li i {
-  font-size: 35px;
+#footer .end .end-list li {
+  padding-top: 9px;
+}
+
+#footer .end .end-list li .first-span {
+  padding-left: 7px;
 }
 /*# sourceMappingURL=menu.css.map */

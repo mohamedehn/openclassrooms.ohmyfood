@@ -3,9 +3,20 @@
 @import './utils/mixin';
 @import './utils/keyframes';
 
+*{
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
 body{
     height: 100%;
     position: relative;
+    font-size: 14px;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
+    font-weight: 100;
 }
 
 header{
@@ -17,12 +28,9 @@ header{
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        font-size: 70px;
-        margin-bottom: -55px;
-        margin-top: -50px;
+        font-size: 30px;
             a{
                 i{
-                    font-size: 50px;
                     color: #676464;
                 }
             }
@@ -37,9 +45,9 @@ header{
             .liencarte{
                 .bloc-card{
                     .image-card{
-                        height: 700px;
+                        margin-top: -15px;
                         width: 100%;
-                        object-fit: cover;
+                        object-fit: contain;
                     }
                 }
             }
@@ -52,13 +60,12 @@ main{
         height: 100%;
         width: 100%;
         background-color: #f3f3f3;
-        margin-top: -135px;
+        margin-top: -50px;
         z-index: 10;
         position: relative;
         border: 1px solid #f3f3f3;
         border-radius: 65px 65px 0px 0px;
             .title{
-                font-size: 45px;
                 font-family: 'Shrikhand';
                 display: flex;
                 align-items: baseline;
@@ -85,8 +92,9 @@ main{
                             @include bloc-menu;
                             .menu-title{
                                 color: black;
-                                padding: 25px;
-                                flex-basis: 80%;
+                                padding: 12px;
+                                flex-basis: 90%;
+                                font-size: 15px;
                                 p{
                                     @include menu-p;
                                 }
@@ -97,6 +105,7 @@ main{
                                 .menu-subtitle{
                                     display: flex;
                                     justify-content: space-between;
+                                    padding-top: 9px;
                                         span{
                                             font-weight: bolder;
                                             text-shadow: 0 0 black;
@@ -111,14 +120,13 @@ main{
                             .check{
                                 background: #99E2D0;
                                 display: flex;
-                                height: 142px;
                                 justify-content: center;
                                 align-items: center;
-                                border-radius: 0px 30px 30px 0px;
+                                border-radius: 0px 12px 12px 0px;
                                 flex-basis: 20%;
                                     i{
                                         color: white;
-                                        font-size: 30px;
+                                        font-size: 20px;
                                     }
                                 &:hover{
                                     transform: translateX(-140px);
@@ -135,30 +143,31 @@ main{
 
 #footer {
     @include footer-end();
-    h1{
-        font-family: 'Shrikhand';
-    }
     .end{
+        h1{
+            font-family: 'Shrikhand';
+            font-size: 20px;
+        }
         @include max-width();
-        @include footer-li;
-        & li{
-            @include footer-li;
-            font-size: 35px;
-            span {
-                padding-left: 15px;
-            }
+        padding-top: 7px;
+        @include desktop-only{
+            padding-top: 1px;
         }
         .end-list{
+            font-weight: 300;
+            font-size: 17px;
             @include desktop-only{
                 display: flex;
                 justify-content: space-between;
                 width: 95%;
             }
+                li{
+                    padding-top: 9px;
+                        .first-span{
+                            padding-left: 7px;
+                        }
+                }
         }
-        li{
-            i{
-                font-size: 35px;
-            }     
-        } 
     }
 }
+

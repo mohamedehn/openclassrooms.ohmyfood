@@ -13,10 +13,9 @@
 @mixin onglet ($marginTop){
     margin-top: $marginTop;
     border: 1px solid #e8e3e3;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 25px 25px 25px 25px;
     width: 90%;
-    height: 150px;
-    font-size: 40px;
+    height: 75px;
     background-color: #f2efef5c;
     display: flex;
     justify-content: center;
@@ -29,31 +28,32 @@
             position: absolute;
             left: 0;
             display: inline-block;
-            padding: 10px 22px;
+            padding: 6px 10px;
             background-color: #9356DC;
             border-radius: 50px;
-            margin-left: -30px;
+            margin-left: -12px;
             color: white;
             font-family: -webkit-body;
-            font-size: 30px;
+        }
+        p{
+            font-weight: 400;
         }
 }
 
 @mixin onglet-icons{
     color: grey;
     flex-basis: 15%;
-    font-size: 50px;
+    font-size: 22px;
 }
 
 @mixin btn-explo{
-    border: 0.5px solid;
     border-radius: 50px 50px 50px 50px;
-    width: 52%;
+    width: 47%;
     display: inline-block;
-    margin-top: 65px;
+    margin-top: 40px;
     background: $color-violet;
     text-align: center;
-    padding: 20px;
+    padding: 14px;
     cursor: pointer;
     box-shadow: 6px 6px 6px #cdcdcd45;
     &:hover{
@@ -61,52 +61,50 @@
         filter: brightness(1.05);
     }
         @include desktop-only{
-            width: 32%;
+            width: 25%;
         }
 }
 
 @mixin image{
-    height: 500px;
+    height: 180px;
     object-fit: cover;
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 25px 25px 0px 0px;
     width: 100%;
         @include desktop-only{
-            height: 400px;
-            object-fit: fill;
+            height: 300px;
+            object-fit: cover;
         }
 }
 
 @mixin card-body{
     background-color: white;
-    border: 1px solid grey;
+    box-shadow: 8px 8px 14px #cdcdcd70;
     margin-right: auto;
     margin-left: auto;
-    height: 150px;
-    border-radius: 0px 0px 50px 50px;
-    font-size: 30px;
+    height: 70px;
+    border-radius: 0px 0px 25px 25px;
     color: black;
     font-weight: 900;
     display: flex;
 }
 
 @mixin card-text{
-    margin: 17px;
-    font-size: 45px;
+    margin: 10px 11px 9px;
     cursor: pointer;
+    font-weight: 300;
 }
 
 @mixin card-heart {
-    padding-top: 50px;
-    font-size: 50px;
+    padding-top: 18px;
+    font-size: 27px;
     color: #8b8686;
     display: flex;
     position: relative;
         .heart1{
             opacity: 1;
-            font-size: 54px;
         }
         .heart2{
             position: relative;
@@ -122,8 +120,8 @@
     }
     .heart2{
         position: relative;
-        right: 52px;
-        top: 4px;
+        right: 27px;
+        top: 1px;
         font-weight: bold;
         color: transparent;
         background-clip: text;
@@ -136,20 +134,15 @@
     }
 }
 
-@mixin footer-li {
-    padding-top: 20px;
-}
-
 @mixin footer-end {
     background-color: #383434;
     color: white;
     list-style-type: none;
-    padding-left: 50px;
-    padding-bottom: 60px;
-    font-size: 26px;
+    padding-left: 20px;
+    padding-bottom: 30px;
     height: auto;
         @include desktop-only{
-            height: 230px;
+            height: 105px;
         }
         a{
             text-decoration: none;
@@ -158,55 +151,54 @@
 }
 
 @mixin new{
-    color: green;
-    font-size: 41px;
+    color: #128112;
     border: 1px solid;
     background-color: #99E2D0;
-    width: 180px;
+    width: 65px;
     text-align: center;
+    font-family: initial;
+    font-size: 16px;
+    padding: 4px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
 }
 
 /*Ci-dessous Mixin pour les menus */
 
 @mixin bloc-menu {
-    border: 1px solid;
-    border-radius: 25px 25px;
+    box-shadow: 8px 8px 14px #cdcdcd70;
+    border-radius: 15px 15px;
     background-color: white;
-    font-size: 40px;
-    height: 140px;
+    height: 60px;
     border-color: lightgray;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 40px;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 17px;
     display: flex;
 }
 
 @mixin sous-titre {
-    font-size: 40px;
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 25px;
     text-decoration: underline #99E2D0;
     text-underline-position: under;
 }
 
 @mixin menu-p {
-    padding: 0px;
     margin: 0px;
-    padding-left: 25px;
 }
 
 @mixin btn-cmd {
     border: 0.5px solid;
     border-radius: 50px 50px 50px 50px;
     width: 45%;
-    font-size: 45px;
-    margin-top: 30px;
     background: $color-violet;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 105px;
-    margin-bottom: 125px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     box-shadow: 6px 6px 6px #cdcdcd45;
     cursor: pointer;
     &:hover{
@@ -227,7 +219,6 @@
         position: relative;
         left: 24px;
         opacity: 1;
-        font-size: 49px;
     }
     .heart2{
         position: relative;
@@ -256,22 +247,4 @@
         transform: scale(1.1);
         transition: transform 350ms ease-in-out;                  
     }
-}
-
-/*Ci-dessous mixin menu-heart2 et menu heart transition avant test*/
-@mixin m {
-    font-weight: bold;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip:text;
-    background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
-    transform: scale(0.5);
-}
-
-@mixin menu-h {
-    opacity: 100;
-    cursor: pointer;
-    transform: scale(1);
-    transition: transform 1330ms ease-in-out;
-    overflow: hidden;    
 }

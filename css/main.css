@@ -16,7 +16,6 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
-/*Ci-dessous mixin menu-heart2 et menu heart transition avant test*/
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -219,12 +218,22 @@ body {
 }
 
 /*Ci-dessous SCSS pour la page d'accueil*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 body {
   height: 100%;
   position: relative;
+  font-size: 14px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
+  font-weight: 100;
 }
 
 .loader {
@@ -249,7 +258,7 @@ body {
   margin: auto;
   position: relative;
   top: -43%;
-  font-size: 34px;
+  font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,9 +324,9 @@ body {
 
 .loader .load__spinner {
   border-top: 10px solid #9356DC;
-  height: 300px;
+  height: 200px;
   border-radius: 50%;
-  width: 300px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,9 +343,9 @@ body {
 
 .loader .load__spinner .load__spinner2 {
   border-bottom: 10px solid #FF79DA;
-  height: 300px;
+  height: 200px;
   border-radius: 50%;
-  width: 300px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,14 +363,21 @@ header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: bold;
-  font-family: 'Shrikhand', cursive;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 70px;
-  margin-bottom: -55px;
-  margin-top: -50px;
+}
+
+header .titre .logo {
+  width: 45%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  header .titre .logo {
+    width: 28%;
+  }
 }
 
 header .localisation .formulaire {
@@ -375,54 +391,68 @@ header .localisation .formulaire {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80px;
-  font-size: 40px;
-  height: 120px;
+  padding: 20px;
+  -webkit-box-shadow: inset 0 11px 9px -7px #b7b7b7db;
+          box-shadow: inset 0 11px 9px -7px #b7b7b7db;
 }
 
 header .localisation .formulaire .search {
   border: none;
   background-color: #babab000;
-  font-size: 35px;
-  font-weight: 600;
   outline: none;
-  margin-left: 40px;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+header .localisation .formulaire #ville::-webkit-input-placeholder {
+  color: black;
+}
+
+header .localisation .formulaire #ville:-ms-input-placeholder {
+  color: black;
+}
+
+header .localisation .formulaire #ville::-ms-input-placeholder {
+  color: black;
+}
+
+header .localisation .formulaire #ville::placeholder {
+  color: black;
 }
 
 header .localisation .formulaire .fa-solid {
-  margin-left: 100px;
+  margin-left: 28px;
+  font-size: 20px;
 }
 
 header .accueil {
-  padding-top: 80px;
-  padding-bottom: 125px;
-  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 65px;
   text-align: center;
   background-color: #f2efef5c;
 }
 
 header .accueil h1 {
-  font-weight: 900;
-  width: 65%;
+  font-weight: 400;
+  width: 75%;
   text-align: center;
   display: inline-block;
 }
 
 header .accueil p {
-  font-size: 50px;
   margin: 0;
+  font-size: 17px;
 }
 
 header .accueil .btn-explo {
-  border: 0.5px solid;
   border-radius: 50px 50px 50px 50px;
-  width: 52%;
+  width: 47%;
   display: inline-block;
-  margin-top: 65px;
+  margin-top: 40px;
   background: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
   background: linear-gradient(0deg, #e263f2f7, #b077f4);
   text-align: center;
-  padding: 20px;
+  padding: 14px;
   cursor: pointer;
   -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
           box-shadow: 6px 6px 6px #cdcdcd45;
@@ -437,24 +467,23 @@ header .accueil .btn-explo:hover {
 
 @media screen and (min-width: 992px) {
   header .accueil .btn-explo {
-    width: 32%;
+    width: 25%;
   }
-}
-
-header .accueil .btn-explo p {
-  color: white;
-  font-weight: 500;
-  display: contents;
-  font-size: 45px;
-  font-family: 'Roboto-ui';
-}
-
-header .accueil .btn-explo p:hover {
-  color: #f2eafa;
 }
 
 header .accueil .btn-explo a {
   text-decoration: none;
+}
+
+header .accueil .btn-explo a p {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  display: contents;
+}
+
+header .accueil .btn-explo:hover {
+  color: #f2eafa;
 }
 
 main {
@@ -463,13 +492,13 @@ main {
 }
 
 main .fonctionnement {
-  margin-top: 115px;
+  margin-top: 50px;
 }
 
 main .fonctionnement h1 {
-  font-weight: 900;
+  font-weight: 500;
   padding-left: 4%;
-  font-size: 42px;
+  font-size: 25px;
 }
 
 @media screen and (min-width: 992px) {
@@ -483,12 +512,11 @@ main .fonctionnement h1 {
 }
 
 main .fonctionnement .onglets .onglet1 {
-  margin-top: 100px;
+  margin-top: 40px;
   border: 1px solid #e8e3e3;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 25px 25px 25px 25px;
   width: 90%;
-  height: 150px;
-  font-size: 40px;
+  height: 75px;
   background-color: #f2efef5c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,13 +537,16 @@ main .fonctionnement .onglets .onglet1 .icon {
   position: absolute;
   left: 0;
   display: inline-block;
-  padding: 10px 22px;
+  padding: 6px 10px;
   background-color: #9356DC;
   border-radius: 50px;
-  margin-left: -30px;
+  margin-left: -12px;
   color: white;
   font-family: -webkit-body;
-  font-size: 30px;
+}
+
+main .fonctionnement .onglets .onglet1 p {
+  font-weight: 400;
 }
 
 @media screen and (min-width: 992px) {
@@ -528,7 +559,7 @@ main .fonctionnement .onglets .onglet1 .fa-mobile-screen-button {
   color: grey;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
-  font-size: 50px;
+  font-size: 22px;
 }
 
 main .fonctionnement .onglets .onglet1:hover {
@@ -536,12 +567,11 @@ main .fonctionnement .onglets .onglet1:hover {
 }
 
 main .fonctionnement .onglets .onglet2 {
-  margin-top: 100px;
+  margin-top: 40px;
   border: 1px solid #e8e3e3;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 25px 25px 25px 25px;
   width: 90%;
-  height: 150px;
-  font-size: 40px;
+  height: 75px;
   background-color: #f2efef5c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,13 +592,16 @@ main .fonctionnement .onglets .onglet2 .icon {
   position: absolute;
   left: 0;
   display: inline-block;
-  padding: 10px 22px;
+  padding: 6px 10px;
   background-color: #9356DC;
   border-radius: 50px;
-  margin-left: -30px;
+  margin-left: -12px;
   color: white;
   font-family: -webkit-body;
-  font-size: 30px;
+}
+
+main .fonctionnement .onglets .onglet2 p {
+  font-weight: 400;
 }
 
 @media screen and (min-width: 992px) {
@@ -581,7 +614,7 @@ main .fonctionnement .onglets .onglet2 .fa-bars {
   color: grey;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
-  font-size: 50px;
+  font-size: 22px;
 }
 
 main .fonctionnement .onglets .onglet2:hover {
@@ -589,12 +622,11 @@ main .fonctionnement .onglets .onglet2:hover {
 }
 
 main .fonctionnement .onglets .onglet3 {
-  margin-top: 100px;
+  margin-top: 40px;
   border: 1px solid #e8e3e3;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 25px 25px 25px 25px;
   width: 90%;
-  height: 150px;
-  font-size: 40px;
+  height: 75px;
   background-color: #f2efef5c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,13 +647,16 @@ main .fonctionnement .onglets .onglet3 .icon {
   position: absolute;
   left: 0;
   display: inline-block;
-  padding: 10px 22px;
+  padding: 6px 10px;
   background-color: #9356DC;
   border-radius: 50px;
-  margin-left: -30px;
+  margin-left: -12px;
   color: white;
   font-family: -webkit-body;
-  font-size: 30px;
+}
+
+main .fonctionnement .onglets .onglet3 p {
+  font-weight: 400;
 }
 
 @media screen and (min-width: 992px) {
@@ -634,7 +669,7 @@ main .fonctionnement .onglets .onglet3 .fa-store {
   color: grey;
   -ms-flex-preferred-size: 15%;
       flex-basis: 15%;
-  font-size: 50px;
+  font-size: 22px;
 }
 
 main .fonctionnement .onglets .onglet3:hover {
@@ -643,16 +678,16 @@ main .fonctionnement .onglets .onglet3:hover {
 
 main .restaurant {
   background-color: #f2efef5c;
-  margin-top: 150px;
-  padding-bottom: 150px;
+  margin-top: 70px;
+  padding-bottom: 70px;
   height: auto;
 }
 
 main .restaurant h1 {
-  font-weight: 900;
-  padding-left: 40px;
-  font-size: 42px;
-  padding-top: 125px;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-top: 50px;
+  font-size: 25px;
 }
 
 @media screen and (min-width: 992px) {
@@ -669,25 +704,27 @@ main .restaurant h1 {
 
 main .restaurant .restaurant-cards .card {
   position: relative;
-  margin-top: 70px;
   width: 90%;
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media screen and (min-width: 992px) {
   main .restaurant .restaurant-cards .card {
-    width: 48%;
+    width: 45%;
+    margin-top: 50px;
   }
 }
 
 main .restaurant .restaurant-cards .card .liencarte {
   display: block;
   text-decoration: none;
+  color: black;
 }
 
 main .restaurant .restaurant-cards .card .liencarte .card-top .image-card {
-  height: 500px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: auto;
@@ -695,38 +732,40 @@ main .restaurant .restaurant-cards .card .liencarte .card-top .image-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 25px 25px 0px 0px;
   width: 100%;
 }
 
 @media screen and (min-width: 992px) {
   main .restaurant .restaurant-cards .card .liencarte .card-top .image-card {
-    height: 400px;
-    -o-object-fit: fill;
-       object-fit: fill;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
 main .restaurant .restaurant-cards .card .liencarte .card-top .new {
-  color: green;
-  font-size: 41px;
+  color: #128112;
   border: 1px solid;
   background-color: #99E2D0;
-  width: 180px;
+  width: 65px;
   text-align: center;
+  font-family: initial;
+  font-size: 16px;
+  padding: 4px;
   position: absolute;
-  right: 65px;
+  right: 20px;
   top: 0px;
 }
 
 main .restaurant .restaurant-cards .card .card-body {
   background-color: white;
-  border: 1px solid grey;
+  -webkit-box-shadow: 8px 8px 14px #cdcdcd70;
+          box-shadow: 8px 8px 14px #cdcdcd70;
   margin-right: auto;
   margin-left: auto;
-  height: 150px;
-  border-radius: 0px 0px 50px 50px;
-  font-size: 30px;
+  height: 70px;
+  border-radius: 0px 0px 25px 25px;
   color: black;
   font-weight: 900;
   display: -webkit-box;
@@ -739,15 +778,21 @@ main .restaurant .restaurant-cards .card .card-body .card-title {
       flex-basis: 90%;
 }
 
-main .restaurant .restaurant-cards .card .card-body .card-title p {
-  margin: 17px;
-  font-size: 45px;
+main .restaurant .restaurant-cards .card .card-body .card-title .liencarte h2 {
+  font-weight: 400;
+  margin: 10px 11px 9px;
+  font-size: 19px;
+}
+
+main .restaurant .restaurant-cards .card .card-body .card-title .liencarte p {
+  margin: 10px 11px 9px;
   cursor: pointer;
+  font-weight: 300;
 }
 
 main .restaurant .restaurant-cards .card .card-body .card-heart {
-  padding-top: 50px;
-  font-size: 50px;
+  padding-top: 18px;
+  font-size: 27px;
   color: #8b8686;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,7 +802,6 @@ main .restaurant .restaurant-cards .card .card-body .card-heart {
 
 main .restaurant .restaurant-cards .card .card-body .card-heart .heart1 {
   opacity: 1;
-  font-size: 54px;
 }
 
 main .restaurant .restaurant-cards .card .card-body .card-heart .heart2 {
@@ -777,8 +821,8 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:hover .heart1 {
 
 main .restaurant .restaurant-cards .card .card-body .card-heart:hover .heart2 {
   position: relative;
-  right: 52px;
-  top: 4px;
+  right: 27px;
+  top: 1px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
@@ -804,8 +848,8 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart1 {
 
 main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
   position: relative;
-  right: 52px;
-  top: 4px;
+  right: 27px;
+  top: 1px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
@@ -826,15 +870,14 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
   background-color: #383434;
   color: white;
   list-style-type: none;
-  padding-left: 50px;
-  padding-bottom: 60px;
-  font-size: 26px;
+  padding-left: 20px;
+  padding-bottom: 30px;
   height: auto;
 }
 
 @media screen and (min-width: 992px) {
   #footer {
-    height: 230px;
+    height: 105px;
   }
 }
 
@@ -843,23 +886,26 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
   color: white;
 }
 
-#footer h1 {
-  font-family: 'Shrikhand';
-}
-
 #footer .end {
   max-width: 1500px;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 7px;
 }
 
-#footer .end li {
-  padding-top: 20px;
-  font-size: 35px;
+#footer .end h1 {
+  font-family: 'Shrikhand';
+  font-size: 20px;
 }
 
-#footer .end li span {
-  padding-left: 15px;
+@media screen and (min-width: 992px) {
+  #footer .end {
+    padding-top: 1px;
+  }
+}
+
+#footer .end .end-list {
+  font-weight: 300;
+  font-size: 17px;
 }
 
 @media screen and (min-width: 992px) {
@@ -874,7 +920,11 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
   }
 }
 
-#footer .end li i {
-  font-size: 35px;
+#footer .end .end-list li {
+  padding-top: 9px;
+}
+
+#footer .end .end-list li .first-span {
+  padding-left: 7px;
 }
 /*# sourceMappingURL=main.css.map */

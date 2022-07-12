@@ -5,12 +5,20 @@
 
 /*Ci-dessous SCSS pour la page d'accueil*/
 
+*{
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
 body{
     height: 100%;
     position: relative;
+    font-size: 14px;
+    min-width: 320px;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
+    font-weight: 100;
 }
 
 .loader{
@@ -31,7 +39,7 @@ body{
         margin: auto;
         position: relative;
         top: -43%;
-        font-size: 34px;
+        font-size: 25px;
         display: flex;
             p{
                 font-weight: bold;
@@ -71,9 +79,9 @@ body{
         justify-content: space-evenly;
         &__spinner {
             border-top: 10px solid #9356DC;
-            height: 300px;
+            height: 200px;
             border-radius: 50%;
-            width: 300px;
+            width: 200px;
             display: flex;
             animation: spin $anim-dur 2s linear infinite;
             animation-direction: normal;
@@ -84,9 +92,9 @@ body{
             }
             .load__spinner2{
                 border-bottom: 10px solid #FF79DA;
-                height: 300px;
+                height: 200px;
                 border-radius: 50%;
-                width: 300px;
+                width: 200px;
                 display: flex;
                 animation: spin $anim-dur 2s linear infinite;
                 animation-direction: reverse;
@@ -103,12 +111,15 @@ body{
 header{
     .titre{
     display: flex;
-    font-weight: bold;
-    font-family: 'Shrikhand', cursive;
     justify-content: center;
-    font-size: 70px;
-    margin-bottom: -55px;
-    margin-top: -50px;
+        .logo{
+            width: 45%;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            @include desktop-only{
+                width: 28%;
+            }
+        }
     }
     .localisation{
         .formulaire{
@@ -116,53 +127,53 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80px;
-            font-size: 40px;
-            height: 120px;
+            padding: 20px;
+            box-shadow: inset 0 11px 9px -7px #b7b7b7db;
                 .search{
                     border: none;
                     background-color: #babab000;
-                    font-size: 35px;
-                    font-weight: 600;
                     outline:none;
-                    margin-left: 40px;
+                    margin-left: 15px;
+                    font-size: 15px;
+                }
+                #ville::placeholder{
+                    color: black;
                 }
                 .fa-solid{
-                    margin-left: 100px;
+                    margin-left: 28px;
+                    font-size: 20px;
                 }
             }
         }
     .accueil{
-        padding-top: 80px;
-        padding-bottom: 125px;
-        font-size: 30px;
+        padding-top: 30px;
+        padding-bottom: 65px;
         text-align: center;
         background-color: #f2efef5c;
         h1{
-            font-weight: 900;
-            width: 65%;
+            font-weight: 400;
+            width: 75%;
             text-align: center;
             display: inline-block;
         }
         p{
-            font-size: 50px;
             margin: 0;
+            font-size: 17px;
         }
         .btn-explo{
             @include btn-explo;
+            a{
+                text-decoration: none;
                 p{
                     color: white;
-                    font-weight: 500;
+                    font-weight: 400;
+                    font-size: 15px;
                     display: contents;
-                    font-size: 45px;
-                    font-family: 'Roboto-ui';
-                &:hover{
-                    color: $hover-color;
                 }
-                }
-                a{
-                    text-decoration: none;
-                }
+            }
+            &:hover{
+                color: $hover-color;
+            }
         }
         
     }
@@ -171,11 +182,11 @@ header{
 main{
     @include max-width();
     .fonctionnement{
-        margin-top: 115px;
+        margin-top: 50px;
             h1{
-                font-weight: 900;
+                font-weight: 500;
                 padding-left: 4%;
-                font-size: 42px;
+                font-size: 25px;
             }
             .onglets{
                 @include desktop-only {
@@ -183,7 +194,7 @@ main{
                     flex-wrap: wrap;
                 }
                 .onglet1{
-                    @include onglet (100px);
+                    @include onglet (40px);
                     @include desktop-only {
                         width: 45%;
                     }
@@ -195,7 +206,7 @@ main{
                     }
                 }
                 .onglet2{
-                    @include onglet (100px);
+                    @include onglet (40px);
                     @include desktop-only {
                         width: 45%;
                     }
@@ -207,7 +218,7 @@ main{
                         }
                 }
                 .onglet3{
-                    @include onglet (100px);
+                    @include onglet (40px);
                     @include desktop-only {
                         width: 45%;
                     }
@@ -222,14 +233,14 @@ main{
     }
     .restaurant{
         background-color: #f2efef5c;
-        margin-top: 150px;
-        padding-bottom: 150px;
+        margin-top: 70px;
+        padding-bottom: 70px;
         height: auto;
         h1{
-            font-weight: 900;
-            padding-left: 40px;
-            font-size: 42px;
-            padding-top: 125px;
+            font-weight: 500;
+            padding-left: 20px;
+            padding-top: 50px;
+            font-size: 25px;
         }
         .restaurant-cards{
             @include desktop-only{
@@ -239,25 +250,24 @@ main{
                 }
                 .card{
                     position: relative;
-                    margin-top: 70px;
                     width: 90%;
+                    margin-top: 30px;
                     margin-right: auto;
                     margin-left: auto;
                     @include desktop-only{
-                        width: 48%;
+                        width: 45%;
+                        margin-top: 50px;
                     }
                     .liencarte {
                         display: block;
                         text-decoration: none;
+                        color: black;
                         .card-top {
                             .image-card{
                                 @include image;
                             }
                             .new{
                                 @include new;
-                                position: absolute;
-                                right: 65px;
-                                top: 0px;
                             }
                         }
                     }
@@ -265,8 +275,15 @@ main{
                         @include card-body;
                         .card-title{
                             flex-basis: 90%;
-                            p{
-                                @include card-text;
+                            .liencarte{
+                                h2{
+                                    font-weight: 400;
+                                    margin: 10px 11px 9px;
+                                    font-size: 19px;
+                                }
+                                p{
+                                    @include card-text;
+                                }
                             }
                         }
                         .card-heart{
@@ -287,30 +304,30 @@ main{
 
 #footer {
     @include footer-end();
-    h1{
-        font-family: 'Shrikhand';
-    }
     .end{
+        h1{
+            font-family: 'Shrikhand';
+            font-size: 20px;
+        }
         @include max-width();
-        @include footer-li;
-        & li{
-            @include footer-li;
-            font-size: 35px;
-            span {
-                padding-left: 15px;
-            }
+        padding-top: 7px;
+        @include desktop-only{
+            padding-top: 1px;
         }
         .end-list{
+            font-weight: 300;
+            font-size: 17px;
             @include desktop-only{
                 display: flex;
                 justify-content: space-between;
                 width: 95%;
             }
+                li{
+                    padding-top: 9px;
+                        .first-span{
+                            padding-left: 7px;
+                        }
+                }
         }
-        li{
-            i{
-                font-size: 35px;
-            }     
-        } 
     }
 }
