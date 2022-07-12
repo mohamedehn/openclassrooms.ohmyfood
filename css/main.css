@@ -16,6 +16,7 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
+/*Ci-dessous mixin menu-heart2 et menu heart transition avant test*/
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -221,6 +222,9 @@ body {
 body {
   height: 100%;
   position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
 
 .loader {

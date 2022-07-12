@@ -64,30 +64,13 @@ main{
                 align-items: baseline;
                 justify-content: space-around;
                     .menu-heart{
-                        position: relative;
-                            .heart1{
-                                position: relative;
-                                left: 24px;
-                                &:hover{
-                                    opacity: 0;
-                                }
-                                &:active{
-                                    opacity: 0;
-                                }
-                            }
-                            .heart2{
-                                @include menu-heart2;
-                                position: relative;
-                                right: 30px;
-                                top:6px;
-                                opacity: 0;
-                                &:hover{
-                                    @include menu-heart-transition;
-                                }
-                                &:active{
-                                    @include menu-heart-transition;
-                                }
-                            }
+                        @include menu-heart();
+                        &:hover{
+                            @include menu-heart-transition();
+                        }
+                        &:active{
+                            @include menu-heart-transition();
+                        }
                     }
             }
             .sous-titre{

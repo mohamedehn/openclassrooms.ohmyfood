@@ -16,6 +16,7 @@ body {
 
 /*Ci-dessous Mixin pour la main page*/
 /*Ci-dessous Mixin pour les menus */
+/*Ci-dessous mixin menu-heart2 et menu heart transition avant test*/
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -290,59 +291,81 @@ main .menu .title {
 }
 
 main .menu .title .menu-heart {
+  color: #8b8686;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
 main .menu .title .menu-heart .heart1 {
   position: relative;
   left: 24px;
-}
-
-main .menu .title .menu-heart .heart1:hover {
-  opacity: 0;
-}
-
-main .menu .title .menu-heart .heart1:active {
-  opacity: 0;
+  opacity: 1;
+  font-size: 49px;
 }
 
 main .menu .title .menu-heart .heart2 {
+  position: relative;
+  right: 32px;
+  top: -2px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
+}
+
+main .menu .title .menu-heart:hover .heart1 {
+  -webkit-transition: -webkit-transform 5000s ease-in-out;
+  transition: -webkit-transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out, -webkit-transform 5000s ease-in-out;
+}
+
+main .menu .title .menu-heart:hover .heart2 {
+  position: relative;
+  right: 23px;
+  top: 2px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
   background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+main .menu .title .menu-heart:active .heart1 {
+  -webkit-transition: -webkit-transform 5000s ease-in-out;
+  transition: -webkit-transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out;
+  transition: transform 5000s ease-in-out, -webkit-transform 5000s ease-in-out;
+}
+
+main .menu .title .menu-heart:active .heart2 {
   position: relative;
-  right: 30px;
-  top: 6px;
-  opacity: 0;
-}
-
-main .menu .title .menu-heart .heart2:hover {
-  opacity: 100;
+  right: 23px;
+  top: 2px;
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
+  background-image: linear-gradient(0deg, #e263f2f7, #b077f4);
+  opacity: 1;
   cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 1330ms ease-in-out;
-  transition: -webkit-transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
-  overflow: hidden;
-}
-
-main .menu .title .menu-heart .heart2:active {
-  opacity: 100;
-  cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 1330ms ease-in-out;
-  transition: -webkit-transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out;
-  transition: transform 1330ms ease-in-out, -webkit-transform 1330ms ease-in-out;
-  overflow: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
 }
 
 main .menu .sous-titre {
