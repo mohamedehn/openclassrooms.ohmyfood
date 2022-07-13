@@ -147,66 +147,47 @@ body {
 
 @-webkit-keyframes movemenu {
   0% {
-    -webkit-transform: translateX(-65px);
-    transform: translateX(-65px);
     opacity: 0;
   }
   20% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
   40% {
+    opacity: 0.4;
+  }
+  60% {
     opacity: 0.6;
   }
-  1% {
+  80% {
     opacity: 0.8;
   }
-  80% {
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes movemenu {
   0% {
-    -webkit-transform: translateX(-65px);
-    transform: translateX(-65px);
     opacity: 0;
   }
   20% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
   40% {
+    opacity: 0.4;
+  }
+  60% {
     opacity: 0.6;
   }
-  1% {
+  80% {
     opacity: 0.8;
   }
-  80% {
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
-@-webkit-keyframes choice-menu {}
-
-@keyframes choice-menu {}@-webkit-keyframes spin-reverse {
-  from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}@keyframes spin-reverse {
+@-webkit-keyframes spin-reverse {
   from {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -217,6 +198,47 @@ body {
   }
 }
 
+@keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes check {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes check {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+/* 
+
+        -webkit-transform: translateX(-65px);
+        transform: translateX(-65px);
+
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -251,16 +273,12 @@ header .titre {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 30px;
+  font-size: 35px;
+  width: 77%;
 }
 
 header .titre a i {
   color: #676464;
-}
-
-header .titre p {
-  -ms-flex-preferred-size: 62%;
-      flex-basis: 62%;
 }
 
 header .card {
@@ -271,8 +289,9 @@ header .card {
 header .card .liencarte .bloc-card .image-card {
   margin-top: -15px;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 270px;
 }
 
 main .menu {
@@ -296,6 +315,13 @@ main .menu .title {
           align-items: baseline;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .menu .title h1 {
+  font-size: 25px;
 }
 
 main .menu .title .menu-heart {
@@ -304,6 +330,7 @@ main .menu .title .menu-heart {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  font-size: 27px;
 }
 
 main .menu .title .menu-heart .heart1 {
@@ -330,8 +357,8 @@ main .menu .title .menu-heart:hover .heart1 {
 
 main .menu .title .menu-heart:hover .heart2 {
   position: relative;
-  right: 23px;
-  top: 2px;
+  right: 3px;
+  top: 0px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
@@ -357,8 +384,8 @@ main .menu .title .menu-heart:active .heart1 {
 
 main .menu .title .menu-heart:active .heart2 {
   position: relative;
-  right: 23px;
-  top: 2px;
+  right: 3px;
+  top: 0px;
   font-weight: bold;
   color: transparent;
   background-clip: text;
@@ -378,9 +405,80 @@ main .menu .title .menu-heart:active .heart2 {
 main .menu .sous-titre {
   margin-right: 50px;
   margin-left: 25px;
-  -webkit-text-decoration: underline #99E2D0;
-          text-decoration: underline #99E2D0;
+  -webkit-text-decoration: 3px underline #99E2D0;
+          text-decoration: 3px underline #99E2D0;
   text-underline-position: under;
+  font-weight: 300;
+}
+
+main .menu .move1 {
+  -webkit-animation: movemenu 1.5s 0.2s both;
+          animation: movemenu 1.5s 0.2s both;
+}
+
+main .menu .move2 {
+  -webkit-animation: movemenu 1.5s 0.4s both;
+          animation: movemenu 1.5s 0.4s both;
+}
+
+main .menu .move3 {
+  -webkit-animation: movemenu 1.5s 0.6s both;
+          animation: movemenu 1.5s 0.6s both;
+}
+
+main .menu .move4 {
+  -webkit-animation: movemenu 1.5s 0.8s both;
+          animation: movemenu 1.5s 0.8s both;
+}
+
+main .menu .move5 {
+  -webkit-animation: movemenu 1.5s 1s both;
+          animation: movemenu 1.5s 1s both;
+}
+
+main .menu .move6 {
+  -webkit-animation: movemenu 1.5s 1.2s both;
+          animation: movemenu 1.5s 1.2s both;
+}
+
+main .menu .move7 {
+  -webkit-animation: movemenu 1.5s 1.4s both;
+          animation: movemenu 1.5s 1.4s both;
+}
+
+main .menu .move8 {
+  -webkit-animation: movemenu 1.5s 1.6s both;
+          animation: movemenu 1.5s 1.6s both;
+}
+
+main .menu .move9 {
+  -webkit-animation: movemenu 1.5s 1.8s both;
+          animation: movemenu 1.5s 1.8s both;
+}
+
+main .menu .move10 {
+  -webkit-animation: movemenu 1.5s 2s both;
+          animation: movemenu 1.5s 2s both;
+}
+
+main .menu .move11 {
+  -webkit-animation: movemenu 1.5s 2.2s both;
+          animation: movemenu 1.5s 2.2s both;
+}
+
+main .menu .move12 {
+  -webkit-animation: movemenu 1.5s 2.4s both;
+          animation: movemenu 1.5s 2.4s both;
+}
+
+main .menu .move13 {
+  -webkit-animation: movemenu 1.5s 2.6s both;
+          animation: movemenu 1.5s 2.6s both;
+}
+
+main .menu .move14 {
+  -webkit-animation: movemenu 1.5s 2.8s both;
+          animation: movemenu 1.5s 2.8s both;
 }
 
 main .menu .card {
@@ -410,12 +508,24 @@ main .menu .card a .bloc-menu {
   display: flex;
 }
 
+@media screen and (min-width: 992px) {
+  main .menu .card a .bloc-menu {
+    width: 70%;
+  }
+}
+
 main .menu .card a .bloc-menu .menu-title {
   color: black;
   padding: 12px;
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 93%;
+      flex-basis: 93%;
   font-size: 15px;
+}
+
+main .menu .card a .bloc-menu .menu-title:hover {
+  opacity: 1;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 main .menu .card a .bloc-menu .menu-title p {
@@ -459,8 +569,10 @@ main .menu .card a .bloc-menu .check {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 0px 12px 12px 0px;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
+  opacity: 0;
+  margin-right: -22px;
 }
 
 main .menu .card a .bloc-menu .check i {
@@ -468,15 +580,24 @@ main .menu .card a .bloc-menu .check i {
   font-size: 20px;
 }
 
+main .menu .card a .bloc-menu .check i:hover {
+  -webkit-animation: check 2s linear;
+          animation: check 2s linear;
+}
+
 main .menu .card a .bloc-menu .check:hover {
-  -webkit-transform: translateX(-140px);
-          transform: translateX(-140px);
+  -webkit-transform: translateX(-11px);
+          transform: translateX(-11px);
+  opacity: 1;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-right: -11px;
 }
 
 main .menu .btn-cmd {
-  border: 0.5px solid;
+  border: 0.5px solid transparent;
   border-radius: 50px 50px 50px 50px;
-  width: 45%;
+  width: 42%;
   background: -webkit-gradient(linear, left bottom, left top, from(#e263f2f7), to(#b077f4));
   background: linear-gradient(0deg, #e263f2f7, #b077f4);
   text-align: center;
@@ -484,9 +605,15 @@ main .menu .btn-cmd {
   margin-left: auto;
   margin-top: 30px;
   margin-bottom: 50px;
-  -webkit-box-shadow: 6px 6px 6px #cdcdcd45;
-          box-shadow: 6px 6px 6px #cdcdcd45;
+  -webkit-box-shadow: 8px 8px 8px #cdcdcd45;
+          box-shadow: 8px 8px 8px #cdcdcd45;
   cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  main .menu .btn-cmd {
+    width: 17%;
+  }
 }
 
 main .menu .btn-cmd:hover {
@@ -498,7 +625,7 @@ main .menu .btn-cmd:hover {
 
 main .menu .btn-cmd p {
   color: white;
-  font-family: 'Roboto-ui';
+  font-weight: 400;
 }
 
 #footer {

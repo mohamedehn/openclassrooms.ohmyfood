@@ -176,13 +176,17 @@
     width: 90%;
     margin-bottom: 17px;
     display: flex;
+    @include desktop-only(){
+        width: 70%;
+    }
 }
 
 @mixin sous-titre {
     margin-right: 50px;
     margin-left: 25px;
-    text-decoration: underline #99E2D0;
+    text-decoration: 3px underline #99E2D0;
     text-underline-position: under;
+    font-weight: 300;
 }
 
 @mixin menu-p {
@@ -190,24 +194,27 @@
 }
 
 @mixin btn-cmd {
-    border: 0.5px solid;
+    border: 0.5px solid transparent;
     border-radius: 50px 50px 50px 50px;
-    width: 45%;
+    width: 42%;
     background: $color-violet;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
     margin-bottom: 50px;
-    box-shadow: 6px 6px 6px #cdcdcd45;
+    box-shadow: 8px 8px 8px #cdcdcd45;
     cursor: pointer;
+    @include desktop-only(){
+        width: 17%;
+    }
     &:hover{
         box-shadow: 50px 50px 50px #cdcdcd45;
         filter: brightness(1.05);
     }
         p{
             color: white;
-            font-family: 'Roboto-ui';
+            font-weight: 400;
         }
 }
 
@@ -215,6 +222,7 @@
     color: #8b8686;
     display: flex;
     position: relative;
+    font-size: 27px;
     .heart1{
         position: relative;
         left: 24px;
@@ -235,8 +243,8 @@
     }
     .heart2{
         position: relative;
-        right: 23px;
-        top: 2px;
+        right: 3px;
+        top: 0px;
         font-weight: bold;
         color: transparent;
         background-clip: text;

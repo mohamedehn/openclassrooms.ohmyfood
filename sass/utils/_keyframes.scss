@@ -64,31 +64,23 @@
 
 @keyframes movemenu{
     0% {
-        -webkit-transform: translateX(-65px);
-        transform: translateX(-65px);
         opacity: 0;
     }
     20% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
     40% {
+        opacity: 0.4;
+    }
+    60% {
         opacity: 0.6;
     }
-    1% {
+    80% {
         opacity: 0.8;
     }
-    80% {
-        opacity: 0.9;
-    }
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
         opacity: 1;
     }
-}
-
-@keyframes choice-menu {
-    
 }
 
 @keyframes spin-reverse {
@@ -99,3 +91,21 @@
         transform: rotate(0deg);
     }
 }
+
+@keyframes check {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* 
+
+        -webkit-transform: translateX(-65px);
+        transform: translateX(-65px);
+
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+*/

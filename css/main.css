@@ -147,66 +147,47 @@ body {
 
 @-webkit-keyframes movemenu {
   0% {
-    -webkit-transform: translateX(-65px);
-    transform: translateX(-65px);
     opacity: 0;
   }
   20% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
   40% {
+    opacity: 0.4;
+  }
+  60% {
     opacity: 0.6;
   }
-  1% {
+  80% {
     opacity: 0.8;
   }
-  80% {
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes movemenu {
   0% {
-    -webkit-transform: translateX(-65px);
-    transform: translateX(-65px);
     opacity: 0;
   }
   20% {
-    opacity: 0.1;
+    opacity: 0.2;
   }
   40% {
+    opacity: 0.4;
+  }
+  60% {
     opacity: 0.6;
   }
-  1% {
+  80% {
     opacity: 0.8;
   }
-  80% {
-    opacity: 0.9;
-  }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
     opacity: 1;
   }
 }
 
-@-webkit-keyframes choice-menu {}
-
-@keyframes choice-menu {}@-webkit-keyframes spin-reverse {
-  from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}@keyframes spin-reverse {
+@-webkit-keyframes spin-reverse {
   from {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -217,6 +198,47 @@ body {
   }
 }
 
+@keyframes spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes check {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes check {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+/* 
+
+        -webkit-transform: translateX(-65px);
+        transform: translateX(-65px);
+
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+*/
 /*Ci-dessous SCSS pour la page d'accueil*/
 * {
   -webkit-box-sizing: border-box;
@@ -257,7 +279,7 @@ body {
 .loader .loader__title {
   margin: auto;
   position: relative;
-  top: -43%;
+  top: -42%;
   font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
