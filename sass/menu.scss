@@ -136,15 +136,26 @@ main{
                     flex-basis: 100%;
                         .bloc-menu{
                             @include bloc-menu;
+                            &:active{
+                                .check{
+                                        transform: translateX(-11px);
+                                        opacity: 1;
+                                        flex-basis: 20%;
+                                        margin-right: -11px;
+                                        transition: transform 680ms ease-in-out 150ms;
+                                        animation: movecheck 1s linear;
+                                            i{
+                                                color: white;
+                                                font-size: 20px;
+                                                animation: check 500ms linear;
+                                            }
+                                }
+                            }
                             .menu-title{
                                 color: black;
                                 padding: 12px;
                                 flex-basis: 93%;
                                 font-size: 15px;
-                                &:hover{
-                                    opacity: 1;
-                                    flex-basis: 80%;
-                                }
                                 p{
                                     @include menu-p;
                                 }
@@ -159,6 +170,13 @@ main{
                                         span{
                                             font-weight: bolder;
                                             text-shadow: 0 0 black;
+                                            &:active{
+                                                opacity: 1;
+                                                flex-basis: 9%;
+                                                transition: transform 880ms ease-in-out 150ms;
+                                                transform: translateX(-15px);
+                                                animation: movespan 1s linear;
+                                                }
                                         }
                                         .subtitle{
                                             display: inline;
@@ -176,19 +194,6 @@ main{
                                 flex-basis: 0%;
                                 opacity: 0;
                                 margin-right: -22px;
-                                    i{
-                                        color: white;
-                                        font-size: 20px;
-                                    &:hover{
-                                        animation: check 2s linear;
-                                    }
-                                    }
-                                &:hover{
-                                    transform: translateX(-11px);
-                                    opacity: 1;
-                                    flex-basis: 20%;
-                                    margin-right: -11px;
-                                }
                             }
                         }
                 }

@@ -94,10 +94,35 @@
 
 @keyframes check {
     from {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
     to {
-        transform: rotate(180deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes movecheck{
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes movespan{
+    0% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(-15px);
     }
 }
 

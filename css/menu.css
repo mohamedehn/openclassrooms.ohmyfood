@@ -211,23 +211,77 @@ body {
 
 @-webkit-keyframes check {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes check {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes movecheck {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes movecheck {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes movespan {
+  0% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+@keyframes movespan {
+  0% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
   }
 }
 
@@ -506,6 +560,7 @@ main .menu .card a .bloc-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -514,18 +569,34 @@ main .menu .card a .bloc-menu {
   }
 }
 
+main .menu .card a .bloc-menu:active .check {
+  -webkit-transform: translateX(-11px);
+          transform: translateX(-11px);
+  opacity: 1;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-right: -11px;
+  -webkit-transition: -webkit-transform 680ms ease-in-out 150ms;
+  transition: -webkit-transform 680ms ease-in-out 150ms;
+  transition: transform 680ms ease-in-out 150ms;
+  transition: transform 680ms ease-in-out 150ms, -webkit-transform 680ms ease-in-out 150ms;
+  -webkit-animation: movecheck 1s linear;
+          animation: movecheck 1s linear;
+}
+
+main .menu .card a .bloc-menu:active .check i {
+  color: white;
+  font-size: 20px;
+  -webkit-animation: check 500ms linear;
+          animation: check 500ms linear;
+}
+
 main .menu .card a .bloc-menu .menu-title {
   color: black;
   padding: 12px;
   -ms-flex-preferred-size: 93%;
       flex-basis: 93%;
   font-size: 15px;
-}
-
-main .menu .card a .bloc-menu .menu-title:hover {
-  opacity: 1;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
 }
 
 main .menu .card a .bloc-menu .menu-title p {
@@ -552,6 +623,20 @@ main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
   text-shadow: 0 0 black;
 }
 
+main .menu .card a .bloc-menu .menu-title .menu-subtitle span:active {
+  opacity: 1;
+  -ms-flex-preferred-size: 9%;
+      flex-basis: 9%;
+  -webkit-transition: -webkit-transform 880ms ease-in-out 150ms;
+  transition: -webkit-transform 880ms ease-in-out 150ms;
+  transition: transform 880ms ease-in-out 150ms;
+  transition: transform 880ms ease-in-out 150ms, -webkit-transform 880ms ease-in-out 150ms;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  -webkit-animation: movespan 1s linear;
+          animation: movespan 1s linear;
+}
+
 main .menu .card a .bloc-menu .menu-title .menu-subtitle .subtitle {
   display: inline;
   font-weight: 100;
@@ -573,25 +658,6 @@ main .menu .card a .bloc-menu .check {
       flex-basis: 0%;
   opacity: 0;
   margin-right: -22px;
-}
-
-main .menu .card a .bloc-menu .check i {
-  color: white;
-  font-size: 20px;
-}
-
-main .menu .card a .bloc-menu .check i:hover {
-  -webkit-animation: check 2s linear;
-          animation: check 2s linear;
-}
-
-main .menu .card a .bloc-menu .check:hover {
-  -webkit-transform: translateX(-11px);
-          transform: translateX(-11px);
-  opacity: 1;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  margin-right: -11px;
 }
 
 main .menu .btn-cmd {
