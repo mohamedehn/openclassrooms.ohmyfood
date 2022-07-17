@@ -12,10 +12,10 @@
 
 @mixin onglet ($marginTop){
     margin-top: $marginTop;
-    border: 1px solid #e8e3e3;
+    border: 0.5px solid #e8e3e3;
     border-radius: 25px 25px 25px 25px;
     width: 90%;
-    height: 75px;
+    height: 70px;
     background-color: #f2efef5c;
     display: flex;
     justify-content: center;
@@ -24,11 +24,12 @@
     margin-left: auto;
     position: relative;
     cursor: pointer;
+    box-shadow: 6px 8px 14px #cdcdcd70;
         .icon{
             position: absolute;
             left: 0;
             display: inline-block;
-            padding: 6px 10px;
+            padding: 4px 8px;
             background-color: #9356DC;
             border-radius: 50px;
             margin-left: -12px;
@@ -139,7 +140,7 @@
     color: white;
     list-style-type: none;
     padding-left: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     height: auto;
         @include desktop-only{
             height: 105px;

@@ -22,18 +22,23 @@ body{
 header{
     .titre{
         display: flex;
-        font-weight: bold;
         font-family: 'Shrikhand', cursive;
         justify-content: center;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        font-size: 35px;
+        font-size: 30px;
         width: 77%;
             a{
+                font-size: 22px;
                 i{
-                    color: #676464;
+                    color: black;
                 }
+            }
+            p{ 
+                margin: 0;
+                margin-top: 15px;
+                margin-bottom: 20px;
             }       
     }
     .card{
@@ -137,24 +142,32 @@ main{
                         .bloc-menu{
                             @include bloc-menu;
                             &:active{
+                                .menu-title{
+                                    flex-basis: 80%;
+                                    transition: transform 600ms ease-in-out;
+                                }
                                 .check{
-                                        transform: translateX(-11px);
                                         opacity: 1;
                                         flex-basis: 20%;
-                                        margin-right: -11px;
-                                        transition: transform 680ms ease-in-out 150ms;
-                                        animation: movecheck 1s linear;
+                                        margin-right: -3px;
+                                        transition: transform 600s ease-in-out;
+                                        animation: movecheck 250ms linear;
                                             i{
                                                 color: white;
                                                 font-size: 20px;
-                                                animation: check 500ms linear;
+                                                animation: check 300ms linear;
                                             }
+                                }
+                                span{
+                                        opacity: 1;
+                                        transition: transform 780ms ease-in-out 150ms;
+                                        animation: movespan 800ms linear;
                                 }
                             }
                             .menu-title{
                                 color: black;
                                 padding: 12px;
-                                flex-basis: 93%;
+                                flex-basis: 100%;
                                 font-size: 15px;
                                 p{
                                     @include menu-p;
@@ -170,13 +183,6 @@ main{
                                         span{
                                             font-weight: bolder;
                                             text-shadow: 0 0 black;
-                                            &:active{
-                                                opacity: 1;
-                                                flex-basis: 9%;
-                                                transition: transform 880ms ease-in-out 150ms;
-                                                transform: translateX(-15px);
-                                                animation: movespan 1s linear;
-                                                }
                                         }
                                         .subtitle{
                                             display: inline;
@@ -218,7 +224,9 @@ main{
         }
         .end-list{
             font-weight: 300;
-            font-size: 17px;
+            font-size: 16px;
+            list-style-type: none;
+            padding: 0;
             @include desktop-only{
                 display: flex;
                 justify-content: space-between;

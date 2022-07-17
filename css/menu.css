@@ -234,54 +234,86 @@ body {
 @-webkit-keyframes movecheck {
   0% {
     opacity: 0;
+    flex-basis: 11%;
+  }
+  20% {
+    flex-basis: 12%;
+  }
+  40% {
+    flex-basis: 13%;
+    opacity: 0.5;
+  }
+  60% {
+    flex-basis: 15%;
   }
   80% {
-    opacity: 0.8;
+    opacity: 0.7;
+    flex-basis: 17%;
   }
   100% {
     opacity: 1;
+    flex-basis: 20%;
   }
 }
 
 @keyframes movecheck {
   0% {
     opacity: 0;
+    -ms-flex-preferred-size: 11%;
+        flex-basis: 11%;
+  }
+  20% {
+    -ms-flex-preferred-size: 12%;
+        flex-basis: 12%;
+  }
+  40% {
+    -ms-flex-preferred-size: 13%;
+        flex-basis: 13%;
+    opacity: 0.5;
+  }
+  60% {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
   }
   80% {
-    opacity: 0.8;
+    opacity: 0.7;
+    -ms-flex-preferred-size: 17%;
+        flex-basis: 17%;
   }
   100% {
     opacity: 1;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 
 @-webkit-keyframes movespan {
   0% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
   }
   80% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
   }
   100% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
 }
 
 @keyframes movespan {
   0% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
   }
   80% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
   }
   100% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
 }
 
@@ -292,6 +324,18 @@ body {
 
         -webkit-transform: translateX(0);
         transform: translateX(0);
+
+        @keyframes movecheck{
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 */
 * {
   -webkit-box-sizing: border-box;
@@ -315,7 +359,6 @@ header .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: bold;
   font-family: 'Shrikhand', cursive;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -327,12 +370,22 @@ header .titre {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 35px;
+  font-size: 30px;
   width: 77%;
 }
 
+header .titre a {
+  font-size: 22px;
+}
+
 header .titre a i {
-  color: #676464;
+  color: black;
+}
+
+header .titre p {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 header .card {
@@ -569,33 +622,50 @@ main .menu .card a .bloc-menu {
   }
 }
 
+main .menu .card a .bloc-menu:active .menu-title {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+}
+
 main .menu .card a .bloc-menu:active .check {
-  -webkit-transform: translateX(-11px);
-          transform: translateX(-11px);
   opacity: 1;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
-  margin-right: -11px;
-  -webkit-transition: -webkit-transform 680ms ease-in-out 150ms;
-  transition: -webkit-transform 680ms ease-in-out 150ms;
-  transition: transform 680ms ease-in-out 150ms;
-  transition: transform 680ms ease-in-out 150ms, -webkit-transform 680ms ease-in-out 150ms;
-  -webkit-animation: movecheck 1s linear;
-          animation: movecheck 1s linear;
+  margin-right: -3px;
+  -webkit-transition: -webkit-transform 600s ease-in-out;
+  transition: -webkit-transform 600s ease-in-out;
+  transition: transform 600s ease-in-out;
+  transition: transform 600s ease-in-out, -webkit-transform 600s ease-in-out;
+  -webkit-animation: movecheck 250ms linear;
+          animation: movecheck 250ms linear;
 }
 
 main .menu .card a .bloc-menu:active .check i {
   color: white;
   font-size: 20px;
-  -webkit-animation: check 500ms linear;
-          animation: check 500ms linear;
+  -webkit-animation: check 300ms linear;
+          animation: check 300ms linear;
+}
+
+main .menu .card a .bloc-menu:active span {
+  opacity: 1;
+  -webkit-transition: -webkit-transform 780ms ease-in-out 150ms;
+  transition: -webkit-transform 780ms ease-in-out 150ms;
+  transition: transform 780ms ease-in-out 150ms;
+  transition: transform 780ms ease-in-out 150ms, -webkit-transform 780ms ease-in-out 150ms;
+  -webkit-animation: movespan 800ms linear;
+          animation: movespan 800ms linear;
 }
 
 main .menu .card a .bloc-menu .menu-title {
   color: black;
   padding: 12px;
-  -ms-flex-preferred-size: 93%;
-      flex-basis: 93%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   font-size: 15px;
 }
 
@@ -621,20 +691,6 @@ main .menu .card a .bloc-menu .menu-title .menu-subtitle {
 main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
   font-weight: bolder;
   text-shadow: 0 0 black;
-}
-
-main .menu .card a .bloc-menu .menu-title .menu-subtitle span:active {
-  opacity: 1;
-  -ms-flex-preferred-size: 9%;
-      flex-basis: 9%;
-  -webkit-transition: -webkit-transform 880ms ease-in-out 150ms;
-  transition: -webkit-transform 880ms ease-in-out 150ms;
-  transition: transform 880ms ease-in-out 150ms;
-  transition: transform 880ms ease-in-out 150ms, -webkit-transform 880ms ease-in-out 150ms;
-  -webkit-transform: translateX(-15px);
-          transform: translateX(-15px);
-  -webkit-animation: movespan 1s linear;
-          animation: movespan 1s linear;
 }
 
 main .menu .card a .bloc-menu .menu-title .menu-subtitle .subtitle {
@@ -699,7 +755,7 @@ main .menu .btn-cmd p {
   color: white;
   list-style-type: none;
   padding-left: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   height: auto;
 }
 
@@ -733,7 +789,9 @@ main .menu .btn-cmd p {
 
 #footer .end .end-list {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 16px;
+  list-style-type: none;
+  padding: 0;
 }
 
 @media screen and (min-width: 992px) {
