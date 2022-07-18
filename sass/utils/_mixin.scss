@@ -75,7 +75,7 @@
     border-radius: 25px 25px 0px 0px;
     width: 100%;
         @include desktop-only{
-            height: 300px;
+            height: 260px;
             object-fit: cover;
         }
 }
@@ -189,10 +189,17 @@
     text-decoration: 3px underline #99E2D0;
     text-underline-position: under;
     font-weight: 300;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @mixin menu-p {
     margin: 0px;
+    white-space: nowrap;
+    width: 85%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @mixin btn-cmd {

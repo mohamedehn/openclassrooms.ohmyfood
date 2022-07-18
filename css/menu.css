@@ -148,6 +148,8 @@ body {
 @-webkit-keyframes movemenu {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   20% {
     opacity: 0.2;
@@ -163,12 +165,16 @@ body {
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes movemenu {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   20% {
     opacity: 0.2;
@@ -184,6 +190,8 @@ body {
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -233,57 +241,83 @@ body {
 
 @-webkit-keyframes movecheck {
   0% {
-    opacity: 0;
-    flex-basis: 11%;
-  }
-  20% {
-    flex-basis: 12%;
+    flex-basis: 0%;
   }
   40% {
-    flex-basis: 13%;
-    opacity: 0.5;
+    flex-basis: 5%;
   }
   60% {
-    flex-basis: 15%;
+    flex-basis: 10%;
   }
   80% {
-    opacity: 0.7;
-    flex-basis: 17%;
+    flex-basis: 15%;
   }
   100% {
-    opacity: 1;
     flex-basis: 20%;
   }
 }
 
 @keyframes movecheck {
   0% {
-    opacity: 0;
-    -ms-flex-preferred-size: 11%;
-        flex-basis: 11%;
-  }
-  20% {
-    -ms-flex-preferred-size: 12%;
-        flex-basis: 12%;
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
   }
   40% {
-    -ms-flex-preferred-size: 13%;
-        flex-basis: 13%;
-    opacity: 0.5;
+    -ms-flex-preferred-size: 5%;
+        flex-basis: 5%;
   }
   60% {
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+  }
+  80% {
     -ms-flex-preferred-size: 15%;
         flex-basis: 15%;
   }
-  80% {
-    opacity: 0.7;
-    -ms-flex-preferred-size: 17%;
-        flex-basis: 17%;
-  }
   100% {
-    opacity: 1;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+}
+
+@-webkit-keyframes moveprices {
+  0% {
+    flex-basis: 98%;
+  }
+  40% {
+    flex-basis: 95%;
+  }
+  60% {
+    flex-basis: 90%;
+  }
+  80% {
+    flex-basis: 85%;
+  }
+  100% {
+    flex-basis: 90%;
+  }
+}
+
+@keyframes moveprices {
+  0% {
+    -ms-flex-preferred-size: 98%;
+        flex-basis: 98%;
+  }
+  40% {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+  }
+  60% {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  80% {
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+  }
+  100% {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
 }
 
@@ -348,11 +382,17 @@ body {
   height: 100%;
   position: relative;
   font-size: 14px;
-  min-width: 320px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
   font-weight: 100;
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 header .titre {
@@ -399,6 +439,13 @@ header .card .liencarte .bloc-card .image-card {
   -o-object-fit: cover;
      object-fit: cover;
   height: 270px;
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 main .menu {
@@ -516,6 +563,9 @@ main .menu .sous-titre {
           text-decoration: 3px underline #99E2D0;
   text-underline-position: under;
   font-weight: 300;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .menu .move1 {
@@ -596,8 +646,8 @@ main .menu .card {
 
 main .menu .card a {
   text-decoration: none;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  display: block;
+  width: 100%;
 }
 
 main .menu .card a .bloc-menu {
@@ -622,43 +672,25 @@ main .menu .card a .bloc-menu {
   }
 }
 
-main .menu .card a .bloc-menu:active .menu-title {
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
-  -webkit-transition: -webkit-transform 600ms ease-in-out;
-  transition: -webkit-transform 600ms ease-in-out;
-  transition: transform 600ms ease-in-out;
-  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
-}
-
-main .menu .card a .bloc-menu:active .check {
+main .menu .card a .bloc-menu:hover .check, main .menu .card a .bloc-menu:active .check {
   opacity: 1;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
-  margin-right: -3px;
-  -webkit-transition: -webkit-transform 600s ease-in-out;
-  transition: -webkit-transform 600s ease-in-out;
-  transition: transform 600s ease-in-out;
-  transition: transform 600s ease-in-out, -webkit-transform 600s ease-in-out;
-  -webkit-animation: movecheck 250ms linear;
-          animation: movecheck 250ms linear;
+  margin-right: 0;
+  -webkit-animation: movecheck 500ms linear;
+          animation: movecheck 500ms linear;
 }
 
-main .menu .card a .bloc-menu:active .check i {
+main .menu .card a .bloc-menu:hover .check i, main .menu .card a .bloc-menu:active .check i {
   color: white;
   font-size: 20px;
   -webkit-animation: check 300ms linear;
           animation: check 300ms linear;
 }
 
-main .menu .card a .bloc-menu:active span {
-  opacity: 1;
-  -webkit-transition: -webkit-transform 780ms ease-in-out 150ms;
-  transition: -webkit-transform 780ms ease-in-out 150ms;
-  transition: transform 780ms ease-in-out 150ms;
-  transition: transform 780ms ease-in-out 150ms, -webkit-transform 780ms ease-in-out 150ms;
-  -webkit-animation: movespan 800ms linear;
-          animation: movespan 800ms linear;
+main .menu .card a .bloc-menu:hover .menu-title, main .menu .card a .bloc-menu:active .menu-title {
+  -webkit-animation: moveprices 500ms linear;
+          animation: moveprices 500ms linear;
 }
 
 main .menu .card a .bloc-menu .menu-title {
@@ -667,10 +699,15 @@ main .menu .card a .bloc-menu .menu-title {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   font-size: 15px;
+  width: 74%;
 }
 
 main .menu .card a .bloc-menu .menu-title p {
   margin: 0px;
+  white-space: nowrap;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .menu .card a .bloc-menu .menu-title .title1 {
@@ -686,6 +723,13 @@ main .menu .card a .bloc-menu .menu-title .menu-subtitle {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 9px;
+}
+
+main .menu .card a .bloc-menu .menu-title .menu-subtitle p {
+  white-space: nowrap;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .menu .card a .bloc-menu .menu-title .menu-subtitle span {
@@ -712,8 +756,7 @@ main .menu .card a .bloc-menu .check {
   border-radius: 0px 12px 12px 0px;
   -ms-flex-preferred-size: 0%;
       flex-basis: 0%;
-  opacity: 0;
-  margin-right: -22px;
+  margin-right: -15px;
 }
 
 main .menu .btn-cmd {
@@ -761,6 +804,14 @@ main .menu .btn-cmd p {
 
 @media screen and (min-width: 992px) {
   #footer {
+    max-width: 900px;
+    margin: auto;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #footer {
     height: 105px;
   }
 }
@@ -776,7 +827,13 @@ main .menu .btn-cmd p {
   padding-top: 7px;
 }
 
-#footer .end h1 {
+@media screen and (min-width: 992px) {
+  #footer .end {
+    padding-left: 20px;
+  }
+}
+
+#footer .end h2 {
   font-family: 'Shrikhand';
   font-size: 20px;
 }

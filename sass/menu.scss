@@ -12,7 +12,6 @@ body{
     height: 100%;
     position: relative;
     font-size: 14px;
-    min-width: 320px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
@@ -20,6 +19,10 @@ body{
 }
 
 header{
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+    }
     .titre{
         display: flex;
         font-family: 'Shrikhand', cursive;
@@ -59,6 +62,10 @@ header{
 
 
 main{
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+    }
     .menu{
         height: 100%;
         width: 100%;
@@ -137,31 +144,25 @@ main{
             .card{
                 display: flex;
                 a{
-                    text-decoration: none;
-                    flex-basis: 100%;
+                    text-decoration: none;                 
+                    display: block;
+                    width: 100%;
                         .bloc-menu{
                             @include bloc-menu;
-                            &:active{
-                                .menu-title{
-                                    flex-basis: 80%;
-                                    transition: transform 600ms ease-in-out;
-                                }
+                            &:hover, &:active{
                                 .check{
                                         opacity: 1;
                                         flex-basis: 20%;
-                                        margin-right: -3px;
-                                        transition: transform 600s ease-in-out;
-                                        animation: movecheck 250ms linear;
+                                        margin-right: 0;
+                                        animation: movecheck 500ms linear;
                                             i{
                                                 color: white;
                                                 font-size: 20px;
                                                 animation: check 300ms linear;
                                             }
                                 }
-                                span{
-                                        opacity: 1;
-                                        transition: transform 780ms ease-in-out 150ms;
-                                        animation: movespan 800ms linear;
+                                .menu-title{
+                                    animation: moveprices 500ms linear;
                                 }
                             }
                             .menu-title{
@@ -169,6 +170,7 @@ main{
                                 padding: 12px;
                                 flex-basis: 100%;
                                 font-size: 15px;
+                                width: 74%;
                                 p{
                                     @include menu-p;
                                 }
@@ -180,6 +182,12 @@ main{
                                     display: flex;
                                     justify-content: space-between;
                                     padding-top: 9px;
+                                        p{
+                                            white-space: nowrap;
+                                            width: 85%;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
                                         span{
                                             font-weight: bolder;
                                             text-shadow: 0 0 black;
@@ -198,8 +206,7 @@ main{
                                 align-items: center;
                                 border-radius: 0px 12px 12px 0px;
                                 flex-basis: 0%;
-                                opacity: 0;
-                                margin-right: -22px;
+                                margin-right: -15px;
                             }
                         }
                 }
@@ -211,9 +218,17 @@ main{
 } 
 
 #footer {
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+        padding-left: 0px;
+    }
     @include footer-end();
     .end{
-        h1{
+        @include desktop-only{
+            padding-left: 20px;
+        }
+        h2{
             font-family: 'Shrikhand';
             font-size: 20px;
         }

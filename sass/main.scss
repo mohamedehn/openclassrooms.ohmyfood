@@ -14,7 +14,6 @@ body{
     height: 100%;
     position: relative;
     font-size: 14px;
-    min-width: 320px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", Arial, "Arial Black", Impact, "Times New Roman", sans-serif;
@@ -109,6 +108,10 @@ body{
 } 
 
 header{
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+    }
     .titre{
         display: flex;
         font-family: 'Shrikhand', cursive;
@@ -124,11 +127,11 @@ header{
     }
     .localisation{
         .formulaire{
-            background-color: rgba(211, 211, 211, 0.758);
+            background-color: rgba(211, 211, 211, 0.55);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             box-shadow: inset 0 11px 9px -7px #b7b7b7db;
                 .search{
                     border: none;
@@ -147,13 +150,14 @@ header{
             }
         }
     .accueil{
-        padding-top: 30px;
-        padding-bottom: 65px;
+        padding-top: 25px;
+        padding-bottom: 60px;
         text-align: center;
-        background-color: #f2efef5c;
+        background-color: #f2efef8c;
         h1{
             font-weight: 400;
             width: 75%;
+            font-size: 24px;
             text-align: center;
             display: inline-block;
         }
@@ -181,6 +185,10 @@ header{
 }
 
 main{
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+    }
     @include max-width();
     .fonctionnement{
         margin-top: 40px;
@@ -304,9 +312,17 @@ main{
 } 
 
 #footer {
+    @include desktop-only{
+        max-width: 900px;
+        margin: auto;
+        padding-left: 0px;
+    }
     @include footer-end();
     .end{
-        h1{
+        @include desktop-only{
+            padding-left: 20px;
+        }
+        h2{
             font-family: 'Shrikhand';
             font-size: 20px;
         }

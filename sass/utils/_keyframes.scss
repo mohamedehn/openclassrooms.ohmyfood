@@ -65,6 +65,7 @@
 @keyframes movemenu{
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     20% {
         opacity: 0.2;
@@ -80,6 +81,7 @@
     }
     100% {
         opacity: 1;
+        transform: translateY(0px);
     }
 }
 
@@ -103,26 +105,37 @@
 
 @keyframes movecheck{
     0% {
-        opacity: 0;
-        flex-basis: 11%;
-    }
-    20%{
-        flex-basis: 12%;
+        flex-basis: 0%;
     }
     40%{
-        flex-basis: 13%;
-        opacity: 0.5;
+        flex-basis: 5%;
     }
     60%{
-        flex-basis: 15%;
+        flex-basis: 10%;
     }
     80% {
-        opacity: 0.7;
-        flex-basis: 17%;
+        flex-basis: 15%;
     }
     100% {
-        opacity: 1;
         flex-basis: 20%;
+    }
+}
+
+@keyframes moveprices{
+    0% {
+        flex-basis: 98%;
+    }
+    40%{
+        flex-basis: 95%;
+    }
+    60%{
+        flex-basis: 90%;
+    }
+    80% {
+        flex-basis: 85%;
+    }
+    100% {
+        flex-basis: 90%;
     }
 }
 
