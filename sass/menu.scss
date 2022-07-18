@@ -20,7 +20,6 @@ body{
 
 header{
     @include desktop-only{
-        max-width: 900px;
         margin: auto;
     }
     .titre{
@@ -147,6 +146,7 @@ main{
                     text-decoration: none;                 
                     display: block;
                     width: 100%;
+                    cursor: pointer;
                         .bloc-menu{
                             @include bloc-menu;
                             &:hover, &:active{
@@ -219,7 +219,6 @@ main{
 
 #footer {
     @include desktop-only{
-        max-width: 900px;
         margin: auto;
         padding-left: 0px;
     }
@@ -227,6 +226,7 @@ main{
     .end{
         @include desktop-only{
             padding-left: 20px;
+            max-width: 900px;
         }
         h2{
             font-family: 'Shrikhand';

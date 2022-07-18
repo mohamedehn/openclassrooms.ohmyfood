@@ -37,9 +37,12 @@ body{
     .loader__title{
         margin: auto;
         position: relative;
-        top: -42%;
+        top: -39%;
         font-size: 25px;
         display: flex;
+        @include desktop-only{
+            top:-38%;
+        }
             p{
                 font-weight: bold;
                 font-family: 'Shrikhand', cursive;
@@ -74,7 +77,7 @@ body{
         height: 500px;
         display: flex;
         position: absolute;
-        top: 4%;
+        top: 7%;
         justify-content: space-evenly;
         &__spinner {
             border-top: 10px solid #9356DC;
@@ -109,7 +112,6 @@ body{
 
 header{
     @include desktop-only{
-        max-width: 900px;
         margin: auto;
     }
     .titre{
@@ -313,7 +315,6 @@ main{
 
 #footer {
     @include desktop-only{
-        max-width: 900px;
         margin: auto;
         padding-left: 0px;
     }
@@ -321,6 +322,7 @@ main{
     .end{
         @include desktop-only{
             padding-left: 20px;
+            max-width: 900px;
         }
         h2{
             font-family: 'Shrikhand';

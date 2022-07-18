@@ -390,7 +390,6 @@ body {
 
 @media screen and (min-width: 992px) {
   header {
-    max-width: 900px;
     margin: auto;
   }
 }
@@ -648,6 +647,7 @@ main .menu .card a {
   text-decoration: none;
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 
 main .menu .card a .bloc-menu {
@@ -804,7 +804,6 @@ main .menu .btn-cmd p {
 
 @media screen and (min-width: 992px) {
   #footer {
-    max-width: 900px;
     margin: auto;
     padding-left: 0px;
   }
@@ -830,6 +829,7 @@ main .menu .btn-cmd p {
 @media screen and (min-width: 992px) {
   #footer .end {
     padding-left: 20px;
+    max-width: 900px;
   }
 }
 

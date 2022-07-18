@@ -410,11 +410,17 @@ body {
 .loader .loader__title {
   margin: auto;
   position: relative;
-  top: -42%;
+  top: -39%;
   font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 992px) {
+  .loader .loader__title {
+    top: -38%;
+  }
 }
 
 .loader .loader__title p {
@@ -469,7 +475,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 4%;
+  top: 7%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -514,7 +520,6 @@ body {
 
 @media screen and (min-width: 992px) {
   header {
-    max-width: 900px;
     margin: auto;
   }
 }
@@ -629,7 +634,7 @@ header .accueil .btn-explo:hover {
 
 @media screen and (min-width: 992px) {
   header .accueil .btn-explo {
-    width: 25%;
+    width: 17%;
   }
 }
 
@@ -1052,7 +1057,6 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
 
 @media screen and (min-width: 992px) {
   #footer {
-    max-width: 900px;
     margin: auto;
     padding-left: 0px;
   }
@@ -1078,6 +1082,7 @@ main .restaurant .restaurant-cards .card .card-body .card-heart:active .heart2 {
 @media screen and (min-width: 992px) {
   #footer .end {
     padding-left: 20px;
+    max-width: 900px;
   }
 }
 
